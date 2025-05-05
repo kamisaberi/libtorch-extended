@@ -1,0 +1,4548 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kamisaberi.github.io/xtorch/installation/System%20Dependency%20Installer%20Script%20Documentation/">
+      
+      
+        <link rel="prev" href="../../getting_started/quickstart_tutorial/">
+      
+      
+        <link rel="next" href="../../publications/extensive_list_of_deep_learning_papers_for_pytorch_on_papar_with_code_com_rewrite/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>System Dependency Installer Script Documentation - xTorch</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#system-dependency-installer-script-documentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="xTorch" class="md-header__button md-logo" aria-label="xTorch" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            xTorch
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              System Dependency Installer Script Documentation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/kamisaberi/xtorch" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="xTorch" class="md-nav__button md-logo" aria-label="xTorch" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    xTorch
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/kamisaberi/xtorch" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00_datasets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    00 datasets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_datasets_for_xtorch_library_not_in_pytorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Datasets for xtorch Library Not in PyTorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_datasets_for_xtorch_library_not_in_pytorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Additional Datasets for xtorch Library Not in PyTorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_machine_learning_datasets_for_%20xtorch_library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Machine Learning Datasets Similar to IRIS for xtorch Library
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_comprehensive_machine_learning_datasets_for_xtorch_library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comprehensive Machine Learning Datasets for xtorch Library
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_summary_of_machine_learning_datasets_for_xtorch_library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Summary of Machine Learning Datasets for xtorch Library
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contributing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../domain_specific_image_transforms_table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domain specific image transforms table
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../list_of_albumentations_image_transforms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    List of albumentations image transforms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../list_of_opencV_image_transforms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    list of opencV image transforms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Api
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            Api
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/ref/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    REF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_17_3" id="__nav_17_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cpp
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_17_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17_3">
+            <span class="md-nav__icon md-icon"></span>
+            Cpp
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/cpp/core_classes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    core_classes.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/cpp/native/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    native.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/cpp/tensor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    tensor.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_17_4" id="__nav_17_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_17_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17_4">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/python/core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    core.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/python/nn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    nn.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/python/optim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    optim.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/python/utils/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    utils.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Community
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/code_of_conduct/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    code_of_conduct.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    faq.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Developer
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19">
+            <span class="md-nav__icon md-icon"></span>
+            Developer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer/benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    benchmarks.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer/contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    contributing.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer/testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    testing.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20" >
+        
+          
+          <label class="md-nav__link" for="__nav_20" id="__nav_20_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ecosystem
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_20">
+            <span class="md-nav__icon md-icon"></span>
+            Ecosystem
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ecosystem/integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    integration.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ecosystem/nlp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    nlp.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ecosystem/vision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    vision.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_21" id="__nav_21_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/0_examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0 examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/comprehensive_example_titles_for_xtorch_library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comprehensive Example Titles for xtorch Library
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/comprehensive_example_titles_for_xtorch_library_with_medical_and_biological_applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comprehensive Example Titles for xtorch Library with Medical and Biological Applications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_4" id="__nav_21_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Audio and speech
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_4">
+            <span class="md-nav__icon md-icon"></span>
+            Audio and speech
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/audio_and_speech/4_1_speech_recognition_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4 1 speech recognition examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/audio_and_speech/4_2_audio_classification_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4 2 audio classification examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_5" id="__nav_21_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Computer vision
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_5">
+            <span class="md-nav__icon md-icon"></span>
+            Computer vision
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/computer_vision/2_1_image_classification_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 1 image classification examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/computer_vision/2_2_object_detection_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 2 object detection examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/computer_vision/2_3_segmentation_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 3 segmentation examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/computer_vision/2_4_image_generation_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 4 image generation examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_6" id="__nav_21_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Data handling and preprocessing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_6">
+            <span class="md-nav__icon md-icon"></span>
+            Data handling and preprocessing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/data_handling_and_preprocessing/10_1_datasets_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10 1 datasets examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/data_handling_and_preprocessing/10_2_data_loaders_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10 2 data loaders examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/data_handling_and_preprocessing/10_3_transforms_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10 3 transforms examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_7" id="__nav_21_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Deployment and production
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_7">
+            <span class="md-nav__icon md-icon"></span>
+            Deployment and production
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/deployment_and_production/9_1_model_serialization_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    9 1 model serialization examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/deployment_and_production/9_2_inference_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    9 2 inference examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/deployment_and_production/9_3_web_services_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    9 3 web services examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_8" id="__nav_21_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Distributed and parallel training
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_8">
+            <span class="md-nav__icon md-icon"></span>
+            Distributed and parallel training
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/distributed_and_parallel_training/13_1_data_parallelism_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    13 1 data parallelism examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/distributed_and_parallel_training/13_2_model_parallelism_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    13 2 model parallelism examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/distributed_and_parallel_training/13_3_distributed_training_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    13 3 distributed training examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_9" id="__nav_21_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Generative models
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_9">
+            <span class="md-nav__icon md-icon"></span>
+            Generative models
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/generative_models/8_1_autoencoders_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    8 1 autoencoders examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/generative_models/8_2_gans_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    8 2 gans examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/generative_models/8_3_diffusion_models_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    8 3 diffusion models examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_10" id="__nav_21_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_10">
+            <span class="md-nav__icon md-icon"></span>
+            Getting started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/getting_started/1_getting_started_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1 getting started examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_11" id="__nav_21_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Graph neural networks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_11">
+            <span class="md-nav__icon md-icon"></span>
+            Graph neural networks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/graph_neural_networks/7_1_node_level_tasks_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7 1 node level tasks examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/graph_neural_networks/7_2_graph_level_tasks_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7 2 graph level tasks examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_12" id="__nav_21_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Natural language processing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_12">
+            <span class="md-nav__icon md-icon"></span>
+            Natural language processing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/natural_language_processing/3_1_text_classification_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3 1 text classification examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/natural_language_processing/3_2_sequence_to_sequence_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3 2 sequence to sequence examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/natural_language_processing/3_3_language_modeling_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3 3 language modeling examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_13" id="__nav_21_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Optimization and training techniques
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_13">
+            <span class="md-nav__icon md-icon"></span>
+            Optimization and training techniques
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/optimization_and_training_techniques/11_1_optimizers_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    11 1 optimizers examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/optimization_and_training_techniques/11_2_learning_rate_schedulers_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    11 2 learning rate schedulers examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/optimization_and_training_techniques/11_3_regularization_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    11 3 regularization examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_14" id="__nav_21_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Performance and benchmarking
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_14">
+            <span class="md-nav__icon md-icon"></span>
+            Performance and benchmarking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/performance_and_benchmarking/12_1_speed_optimization_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    12 1 speed optimization examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/performance_and_benchmarking/12_2_memory_management_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    12 2 memory management examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_15" id="__nav_21_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Reinforcement learning
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_15">
+            <span class="md-nav__icon md-icon"></span>
+            Reinforcement learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/reinforcement_learning/6_1_value_based_methods_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6 1 value based methods examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/reinforcement_learning/6_2_policy_based_methods_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6 2 policy based methods examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_16" id="__nav_21_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Time series and sequential data
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_16">
+            <span class="md-nav__icon md-icon"></span>
+            Time series and sequential data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/time_series_and_sequential_data/5_1_forecasting_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5 1 forecasting examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/time_series_and_sequential_data/5_2_anomaly_detection_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5 2 anomaly detection examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_22" >
+        
+          
+          <label class="md-nav__link" for="__nav_22" id="__nav_22_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_22">
+            <span class="md-nav__icon md-icon"></span>
+            Getting started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    xTorch Installation Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/migration_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    migration_guide.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/quickstart_tutorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    quickstart_tutorial.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_23" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_23" id="__nav_23_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_23_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_23">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    System Dependency Installer Script Documentation
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Dependency Installer Script Documentation
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-the-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running the Script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Inputs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outputs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#script-structure-and-detailed-breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Script Structure and Detailed Breakdown
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Script Structure and Detailed Breakdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-system-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. System Detection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-package-installation-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Package Installation Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-package-mapping-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Package Mapping Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-pre-installation-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Pre-Installation Checks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-main-installation-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Main Installation Loop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-libtorch-installation-and-cmakeliststxt-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. LibTorch Installation and CMakeLists.txt Update
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#platform-specific-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform-Specific Notes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-run-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Run (Linux)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-run-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Run (Windows)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Improvements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_24" >
+        
+          
+          <label class="md-nav__link" for="__nav_24" id="__nav_24_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Publications
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_24">
+            <span class="md-nav__icon md-icon"></span>
+            Publications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publications/extensive_list_of_deep_learning_papers_for_pytorch_on_papar_with_code_com_rewrite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Extensive List of Deep Learning Papers for PyTorch Rewrite
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publications/extensive_list_of_deep_learning_papers_for_pytorch_rewrite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Extensive List of Deep Learning Papers for PyTorch Rewrite
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_25" >
+        
+          
+          <label class="md-nav__link" for="__nav_25" id="__nav_25_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Roadmaps
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_25_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_25">
+            <span class="md-nav__icon md-icon"></span>
+            Roadmaps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roadmaps/datasets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Transforms Roadmap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roadmaps/models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Datasets Roadmap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roadmaps/transforms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Transforms Roadmap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_26" >
+        
+          
+          <label class="md-nav__link" for="__nav_26" id="__nav_26_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tutorials
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_26_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_26">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_26_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_26_2" id="__nav_26_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Advanced
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_26_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_26_2">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/advanced/cpp_extensions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    cpp_extensions.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/advanced/jit_compilation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    jit_compilation.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_26_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_26_3" id="__nav_26_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Basics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_26_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_26_3">
+            <span class="md-nav__icon md-icon"></span>
+            Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/basics/custom_layers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    custom_layers.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/basics/hello_world/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hello World
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/basics/working_with_tensors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    working_with_tensors.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_26_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_26_4" id="__nav_26_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Intermediate
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_26_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_26_4">
+            <span class="md-nav__icon md-icon"></span>
+            Intermediate
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/intermediate/gpu_acceleration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    gpu_acceleration.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/intermediate/mixed_precision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    mixed_precision.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-the-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running the Script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Inputs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outputs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#script-structure-and-detailed-breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      Script Structure and Detailed Breakdown
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Script Structure and Detailed Breakdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-system-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. System Detection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-package-installation-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Package Installation Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-package-mapping-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Package Mapping Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-pre-installation-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Pre-Installation Checks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-main-installation-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Main Installation Loop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-libtorch-installation-and-cmakeliststxt-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. LibTorch Installation and CMakeLists.txt Update
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#platform-specific-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform-Specific Notes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-run-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Run (Linux)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-run-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Run (Windows)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Improvements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="system-dependency-installer-script-documentation">System Dependency Installer Script Documentation</h1>
+<h2 id="overview">Overview</h2>
+<p><strong>Author</strong>: Kamran Saberifard<br />
+<strong>Email</strong>: kamisaberi@gmail.com<br />
+<strong>GitHub</strong>: <a href="https://github.com/kamisaberi">https://github.com/kamisaberi</a><br />
+<strong>Script Name</strong>: <code>install_dependencies.sh</code><br />
+<strong>Purpose</strong>: This bash script automates the installation of development libraries required for multimedia and machine learning projects across multiple operating systems. It detects the OS, installs dependencies using appropriate package managers, prompts for a LibTorch installation path, updates a <code>CMakeLists.txt</code> file, and runs the build/install process.</p>
+<h3 id="supported-systems">Supported Systems</h3>
+<ul>
+<li><strong>Linux</strong>:</li>
+<li>Ubuntu, Linux Mint (Debian-based, uses <code>apt</code>)</li>
+<li>Arch Linux, Manjaro (Arch-based, uses <code>pacman</code>)</li>
+<li><strong>macOS</strong>: Uses Homebrew (<code>brew</code>)</li>
+<li><strong>Windows</strong>: Uses Chocolatey (<code>choco</code>) and vcpkg for C++ libraries</li>
+</ul>
+<h3 id="key-features">Key Features</h3>
+<ul>
+<li><strong>System Detection</strong>: Identifies the operating system and configures package installation accordingly.</li>
+<li><strong>Dependency Installation</strong>: Installs libraries like OpenCV, HDF5, libcurl, zlib, etc., using platform-specific package managers.</li>
+<li><strong>LibTorch Configuration</strong>: Prompts the user for a valid LibTorch path (with validation loop), updates <code>CMakeLists.txt</code>, and runs the build/install process.</li>
+<li><strong>Error Handling</strong>: Validates inputs, checks for package manager availability, and provides clear error messages.</li>
+<li><strong>Cross-Platform Support</strong>: Handles platform-specific nuances (e.g., path formats, build commands).</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li><strong>Linux</strong>: <code>sudo</code> privileges for <code>apt</code>, <code>pacman</code>, and <code>make install</code>.</li>
+<li><strong>macOS</strong>: Xcode Command Line Tools (for <code>make</code> and <code>git</code>).</li>
+<li><strong>Windows</strong>: PowerShell and a C++ compiler (e.g., MSVC via Visual Studio).</li>
+<li><strong>General</strong>: Internet access for downloading package managers and dependencies.</li>
+<li><strong>LibTorch</strong>: A manually downloaded LibTorch installation from <a href="https://pytorch.org/get-started/locally/">https://pytorch.org/get-started/locally/</a>.</li>
+<li><strong>CMake Project</strong>: A <code>CMakeLists.txt</code> file in the current directory or a user-specified location.</li>
+</ul>
+<h3 id="running-the-script">Running the Script</h3>
+<ol>
+<li>Save the script as <code>install_dependencies.sh</code>.</li>
+<li>Make it executable:
+   <code>bash
+   chmod +x install_dependencies.sh</code></li>
+<li>Run the script:
+   <code>bash
+   ./install_dependencies.sh</code></li>
+</ol>
+<h3 id="user-inputs">User Inputs</h3>
+<ul>
+<li><strong>LibTorch Path</strong>:</li>
+<li>Prompt: <code>Enter the absolute path to your LibTorch installation (e.g., /home/user/libtorch or C:\\libtorch, or type 'quit' to exit):</code></li>
+<li>Requirements:<ul>
+<li>Must be absolute (starts with <code>/</code> on Linux/macOS, drive letter like <code>C:\</code> on Windows).</li>
+<li>Must contain a valid LibTorch installation (checked via <code>lib/libtorch.so</code> on Linux, <code>lib/libtorch.dylib</code> on macOS, <code>lib/torch.lib</code> on Windows).</li>
+<li>The script loops until a valid path is provided or the user types <code>quit</code>/<code>exit</code>.</li>
+</ul>
+</li>
+<li><strong>CMakeLists.txt Path</strong> (if not found in the current directory):</li>
+<li>Prompt: <code>Enter the path to CMakeLists.txt:</code></li>
+<li>Must point to an existing <code>CMakeLists.txt</code> file.</li>
+</ul>
+<h3 id="outputs">Outputs</h3>
+<ul>
+<li><strong>Console Messages</strong>: Logs the detected system, package installation status, LibTorch validation, <code>CMakeLists.txt</code> updates, and build/install results.</li>
+<li><strong>File Modifications</strong>:</li>
+<li>Installs dependencies using the appropriate package manager.</li>
+<li>Backs up <code>CMakeLists.txt</code> to <code>CMakeLists.txt.bak</code>.</li>
+<li>Updates <code>CMakeLists.txt</code> with the LibTorch path.</li>
+<li><strong>Build/Install</strong>:</li>
+<li>Linux: Runs <code>sudo make install</code>.</li>
+<li>macOS: Runs <code>make install</code>.</li>
+<li>Windows: Runs CMake build (<code>cmake --build . --config Release</code>) and install (<code>cmake --install .</code>).</li>
+</ul>
+<h2 id="script-structure-and-detailed-breakdown">Script Structure and Detailed Breakdown</h2>
+<h3 id="1-system-detection">1. System Detection</h3>
+<p><strong>Purpose</strong>: Identifies the operating system to configure package installation and build commands.<br />
+<strong>Code</strong>:</p>
+<pre><code class="language-bash">if [[ &quot;$OSTYPE&quot; == &quot;darwin&quot;* ]]; then
+    SYSTEM=&quot;macos&quot;
+elif [[ &quot;$OSTYPE&quot; == &quot;msys&quot; || &quot;$OSTYPE&quot; == &quot;cygwin&quot; || &quot;$OSTYPE&quot; == &quot;win32&quot; ]]; then
+    SYSTEM=&quot;windows&quot;
+elif grep -q &quot;ID=ubuntu&quot; /etc/os-release 2&gt;/dev/null; then
+    SYSTEM=&quot;ubuntu&quot;
+elif grep -q &quot;ID=arch&quot; /etc/os-release 2&gt;/dev/null; then
+    SYSTEM=&quot;arch&quot;
+elif grep -q &quot;ID=manjaro&quot; /etc/os-release 2&gt;/dev/null; then
+    SYSTEM=&quot;manjaro&quot;
+elif grep -q &quot;ID=linuxmint&quot; /etc/os-release 2&gt;/dev/null; then
+    SYSTEM=&quot;mint&quot;
+else
+    echo &quot;Unsupported system&quot;
+    exit 1
+fi
+echo &quot;Detected system: $SYSTEM&quot;
+</code></pre>
+<p><strong>Functionality</strong>:
+- Uses <code>$OSTYPE</code> to detect macOS (<code>darwin</code>) and Windows (<code>msys</code>, <code>cygwin</code>, <code>win32</code>).
+- Parses <code>/etc/os-release</code> for Linux distributions (Ubuntu, Arch, Manjaro, Mint).
+- Sets the <code>SYSTEM</code> variable to one of: <code>macos</code>, <code>windows</code>, <code>ubuntu</code>, <code>arch</code>, <code>manjaro</code>, <code>mint</code>.
+- Exits with an error if the system is unsupported.</p>
+<h3 id="2-package-installation-function">2. Package Installation Function</h3>
+<p><strong>Purpose</strong>: Installs dependencies using platform-specific package managers, checking if they’re already installed.<br />
+<strong>Code</strong>:</p>
+<pre><code class="language-bash">check_and_install() {
+    local package=$1
+    local install_cmd=$2
+    case &quot;$SYSTEM&quot; in
+        ubuntu|mint)
+            if ! dpkg -s &quot;$package&quot; &gt;/dev/null 2&gt;&amp;1; then
+                echo &quot;Package $package not found, installing...&quot;
+                sudo apt-get install -y &quot;$package&quot;
+            else
+                echo &quot;Package $package is already installed&quot;
+            fi
+            ;;
+        arch|manjaro)
+            if ! pacman -Q &quot;$package&quot; &gt;/dev/null 2&gt;&amp;1; then
+                echo &quot;Package $package not found, installing...&quot;
+                sudo pacman -S --noconfirm &quot;$package&quot;
+            else
+                echo &quot;Package $package is already installed&quot;
+            fi
+            ;;
+        macos)
+            if ! brew list &quot;$package&quot; &gt;/dev/null 2&gt;&amp;1; then
+                echo &quot;Package $package not found, installing...&quot;
+                brew install &quot;$package&quot;
+            else
+                echo &quot;Package $package is already installed&quot;
+            fi
+            ;;
+        windows)
+            if [[ &quot;$install_cmd&quot; == &quot;vcpkg install&quot;* ]]; then
+                if [[ -d &quot;$VCPKG_ROOT/installed/x64-windows/lib&quot; &amp;&amp; -n &quot;$(find &quot;$VCPKG_ROOT/installed/x64-windows/lib&quot; -name &quot;*$package*&quot;)&quot; ]]; then
+                    echo &quot;Package $package is already installed via vcpkg&quot;
+                else
+                    echo &quot;Package $package not found, installing via vcpkg...&quot;
+                    $install_cmd
+                fi
+            else
+                if ! choco list --local-only | grep -q &quot;$package&quot;; then
+                    echo &quot;Package $package not found, installing via Chocolatey...&quot;
+                    choco install &quot;$package&quot; -y
+                else
+                    echo &quot;Package $package is already installed&quot;
+                fi
+            fi
+            ;;
+    esac
+}
+</code></pre>
+<p><strong>Functionality</strong>:
+- Takes two parameters: package name and installation command (for logging).
+- Checks if the package is installed:
+  - Linux (Debian): Uses <code>dpkg -s</code>.
+  - Linux (Arch): Uses <code>pacman -Q</code>.
+  - macOS: Uses <code>brew list</code>.
+  - Windows (Chocolatey): Uses <code>choco list --local-only</code>.
+  - Windows (vcpkg): Checks for library files in <code>$VCPKG_ROOT/installed/x64-windows/lib</code>.
+- Installs the package if missing, using <code>sudo</code> where required (<code>apt</code>, <code>pacman</code>).
+- Skips installation if the package is already present.</p>
+<h3 id="3-package-mapping-table">3. Package Mapping Table</h3>
+<p><strong>Purpose</strong>: Maps Ubuntu package names to equivalents for Arch, macOS, and Windows.<br />
+<strong>Code</strong>:</p>
+<pre><code class="language-bash">declare -A packages
+packages[&quot;libcurl4-openssl-dev&quot;]=&quot;curl:curl:curl&quot;
+packages[&quot;libopencv-dev&quot;]=&quot;opencv:opencv:opencv&quot;
+packages[&quot;zlib1g-dev&quot;]=&quot;zlib:zlib:zlib&quot;
+packages[&quot;libssl-dev&quot;]=&quot;openssl:openssl:openssl&quot;
+packages[&quot;liblzma-dev&quot;]=&quot;xz:xz:xz-utils&quot;
+packages[&quot;libarchive-dev&quot;]=&quot;libarchive:libarchive:libarchive&quot;
+packages[&quot;libtar-dev&quot;]=&quot;libtar:libtar:vcpkg:libtar&quot;
+packages[&quot;libzip-dev&quot;]=&quot;libzip:libzip:libzip&quot;
+packages[&quot;libsndfile1-dev&quot;]=&quot;libsndfile:libsndfile:libsndfile&quot;
+packages[&quot;libhdf5-dev&quot;]=&quot;hdf5:hdf5:hdf5&quot;
+</code></pre>
+<p><strong>Functionality</strong>:
+- Uses an associative array to map Ubuntu package names to Arch, macOS, and Windows equivalents.
+- Format: <code>[Ubuntu Package]=Arch Package:macOS Package:Windows Package</code>.
+- Windows uses <code>vcpkg:</code> prefix for packages installed via vcpkg (e.g., <code>libtar</code>).
+- Covers key dependencies like OpenCV, HDF5, libcurl, zlib, and libarchive.</p>
+<h3 id="4-pre-installation-checks">4. Pre-Installation Checks</h3>
+<p><strong>Purpose</strong>: Ensures package managers are installed and updated before installing dependencies.<br />
+<strong>Code</strong>:</p>
+<pre><code class="language-bash">case &quot;$SYSTEM&quot; in
+    ubuntu|mint)
+        echo &quot;Updating apt package lists...&quot;
+        sudo apt-get update
+        ;;
+    arch|manjaro)
+        echo &quot;Updating pacman package lists...&quot;
+        sudo pacman -Syu --noconfirm
+        ;;
+    macos)
+        if ! command -v brew &gt;/dev/null 2&gt;&amp;1; then
+            echo &quot;Homebrew not found. Installing Homebrew...&quot;
+            /bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+            if ! command -v brew &gt;/dev/null 2&gt;&amp;1; then
+                echo &quot;Homebrew installation failed. Please install manually: https://brew.sh&quot;
+                exit 1
+            fi
+            if [[ &quot;:$PATH:&quot; != *&quot;/usr/local/bin:&quot;* &amp;&amp; &quot;:$PATH:&quot; != *&quot;/opt/homebrew/bin:&quot;* ]]; then
+                echo &quot;Adding Homebrew to PATH...&quot;
+                echo 'eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;' &gt;&gt; ~/.zshrc
+                eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;
+            fi
+        fi
+        echo &quot;Updating Homebrew...&quot;
+        brew update
+        ;;
+    windows)
+        if ! command -v powershell &gt;/dev/null 2&gt;&amp;1; then
+            echo &quot;PowerShell is required to install Chocolatey/vcpkg. Please install PowerShell first.&quot;
+            exit 1
+        fi
+        if ! command -v choco &gt;/dev/null 2&gt;&amp;1; then
+            echo &quot;Chocolatey not found. Installing Chocolatey...&quot;
+            powershell -NoProfile -ExecutionPolicy Bypass -Command &quot;[System.Net.WebClient]::new().DownloadString('https://chocolatey.org/install.ps1') | iex&quot;
+            if ! command -v choco &gt;/dev/null 2&gt;&amp;1; then
+                echo &quot;Chocolatey installation failed. Please install manually: https://chocolatey.org/install&quot;
+                exit 1
+            fi
+        fi
+        echo &quot;Refreshing Chocolatey environment...&quot;
+        refreshenv
+        VCPKG_ROOT=&quot;$HOME/vcpkg&quot;
+        if [[ ! -f &quot;$VCPKG_ROOT/vcpkg&quot; ]]; then
+            echo &quot;vcpkg not found. Installing vcpkg...&quot;
+            if ! command -v git &gt;/dev/null 2&gt;&amp;1; then
+                echo &quot;Installing git via Chocolatey (required for vcpkg)...&quot;
+                choco install git -y
+                refreshenv
+            fi
+            git clone https://github.com/microsoft/vcpkg.git &quot;$VCPKG_ROOT&quot;
+            powershell -NoProfile -ExecutionPolicy Bypass -Command &quot;cd $VCPKG_ROOT; .\bootstrap-vcpkg.bat&quot;
+            if [[ ! -f &quot;$VCPKG_ROOT/vcpkg&quot; ]]; then
+                echo &quot;vcpkg installation failed. Please install manually: https://vcpkg.io&quot;
+                exit 1
+            fi
+            powershell -NoProfile -ExecutionPolicy Bypass -Command &quot;cd $VCPKG_ROOT; .\vcpkg integrate&quot;
+            echo &quot;vcpkg installed. Use 'vcpkg integrate' in your project to link libraries.&quot;
+        fi
+        ;;
+esac
+</code></pre>
+<p><strong>Functionality</strong>:
+- <strong>Linux (Debian)</strong>: Updates <code>apt</code> package lists (<code>sudo apt-get update</code>).
+- <strong>Linux (Arch)</strong>: Updates <code>pacman</code> package lists (<code>sudo pacman -Syu --noconfirm</code>).
+- <strong>macOS</strong>:
+  - Installs Homebrew if missing using the official installation script.
+  - Adds Homebrew to the PATH if not present.
+  - Updates Homebrew (<code>brew update</code>).
+- <strong>Windows</strong>:
+  - Checks for PowerShell (required for Chocolatey/vcpkg).
+  - Installs Chocolatey if missing using the official PowerShell script.
+  - Installs vcpkg if missing by cloning its GitHub repository and running <code>bootstrap-vcpkg.bat</code>.
+  - Installs <code>git</code> via Chocolatey if needed for vcpkg.
+  - Runs <code>vcpkg integrate</code> for MSVC integration.
+  - Refreshes the environment (<code>refreshenv</code>) after Chocolatey installations.</p>
+<h3 id="5-main-installation-loop">5. Main Installation Loop</h3>
+<p><strong>Purpose</strong>: Installs all dependencies listed in the package mapping table.<br />
+<strong>Code</strong>:</p>
+<pre><code class="language-bash">for ubuntu_pkg in &quot;${!packages[@]}&quot;; do
+    IFS=':' read -r arch_pkg macos_pkg windows_pkg &lt;&lt;&lt; &quot;${packages[$ubuntu_pkg]}&quot;
+    case &quot;$SYSTEM&quot; in
+        ubuntu|mint)
+            check_and_install &quot;$ubuntu_pkg&quot; &quot;apt-get install -y&quot;
+            ;;
+        arch|manjaro)
+            check_and_install &quot;$arch_pkg&quot; &quot;pacman -S --noconfirm&quot;
+            ;;
+        macos)
+            check_and_install &quot;$macos_pkg&quot; &quot;brew install&quot;
+            ;;
+        windows)
+            if [[ &quot;$windows_pkg&quot; == vcpkg:* ]]; then
+                vcpkg_pkg=&quot;${windows_pkg#vcpkg:}&quot;
+                check_and_install &quot;$vcpkg_pkg&quot; &quot;powershell -NoProfile -ExecutionPolicy Bypass -Command \&quot;cd $VCPKG_ROOT; .\vcpkg install $vcpkg_pkg:x64-windows\&quot;&quot;
+            else
+                check_and_install &quot;$windows_pkg&quot; &quot;choco install -y&quot;
+            fi
+            ;;
+    esac
+done
+</code></pre>
+<p><strong>Functionality</strong>:
+- Iterates through the <code>packages</code> array.
+- Extracts platform-specific package names using <code>IFS=':'</code>.
+- Calls <code>check_and_install</code> with the appropriate package name and command.
+- For Windows, uses vcpkg for packages prefixed with <code>vcpkg:</code> (e.g., <code>libtar</code>), otherwise uses Chocolatey.</p>
+<h3 id="6-libtorch-installation-and-cmakeliststxt-update">6. LibTorch Installation and CMakeLists.txt Update</h3>
+<p><strong>Purpose</strong>: Handles LibTorch configuration by prompting for its path, validating it, updating <code>CMakeLists.txt</code>, and running the build/install process.<br />
+<strong>Code</strong>:</p>
+<pre><code class="language-bash">echo &quot;LibTorch is not available via package managers. Please download and install manually from https://pytorch.org/get-started/locally/&quot;
+
+while true; do
+    read -p &quot;Enter the absolute path to your LibTorch installation (e.g., /home/user/libtorch or C:\\libtorch, or type 'quit' to exit): &quot; LIBTORCH_PATH
+    if [[ &quot;$LIBTORCH_PATH&quot; == &quot;quit&quot; || &quot;$LIBTORCH_PATH&quot; == &quot;exit&quot; ]]; then
+        echo &quot;Exiting due to user request.&quot;
+        exit 1
+    fi
+    case &quot;$SYSTEM&quot; in
+        ubuntu|mint|arch|manjaro|macos)
+            if [[ ! &quot;$LIBTORCH_PATH&quot; =~ ^/ ]]; then
+                echo &quot;Error: Path must be absolute (start with '/'). Please try again.&quot;
+                continue
+            fi
+            ;;
+        windows)
+            if [[ ! &quot;$LIBTORCH_PATH&quot; =~ ^[a-zA-Z]:\\ ]]; then
+                echo &quot;Error: Path must be absolute (start with drive letter, e.g., C:\\). Please try again.&quot;
+                continue
+            fi
+            LIBTORCH_PATH=$(echo &quot;$LIBTORCH_PATH&quot; | sed 's|\\|/|g')
+            ;;
+    esac
+    case &quot;$SYSTEM&quot; in
+        ubuntu|mint|arch|manjaro)
+            if [[ ! -f &quot;$LIBTORCH_PATH/lib/libtorch.so&quot; ]]; then
+                echo &quot;Error: LibTorch not found at $LIBTORCH_PATH. Ensure the path contains a valid LibTorch installation with 'lib/libtorch.so'.&quot;
+                continue
+            fi
+            ;;
+        macos)
+            if [[ ! -f &quot;$LIBTORCH_PATH/lib/libtorch.dylib&quot; ]]; then
+                echo &quot;Error: LibTorch not found at $LIBTORCH_PATH. Ensure the path contains a valid LibTorch installation with 'lib/libtorch.dylib'.&quot;
+                continue
+            fi
+            ;;
+        windows)
+            if [[ ! -f &quot;$LIBTORCH_PATH/lib/torch.lib&quot; ]]; then
+                echo &quot;Error: LibTorch not found at $LIBTORCH_PATH. Ensure the path contains a valid LibTorch installation with 'lib/torch.lib'.&quot;
+                continue
+            fi
+            ;;
+    esac
+    echo &quot;Valid LibTorch path provided: $LIBTORCH_PATH&quot;
+    break
+done
+
+CMAKELISTS_FILE=&quot;CMakeLists.txt&quot;
+if [[ ! -f &quot;$CMAKELISTS_FILE&quot; ]]; then
+    echo &quot;Error: CMakeLists.txt not found in the current directory.&quot;
+    read -p &quot;Enter the path to CMakeLists.txt: &quot; CMAKELISTS_FILE
+    if [[ ! -f &quot;$CMAKELISTS_FILE&quot; ]]; then
+        echo &quot;Error: Specified CMakeLists.txt does not exist.&quot;
+        exit 1
+    fi
+fi
+
+cp &quot;$CMAKELISTS_FILE&quot; &quot;${CMAKELISTS_FILE}.bak&quot;
+echo &quot;Backed up $CMAKELISTS_FILE to ${CMAKELISTS_FILE}.bak&quot;
+
+if grep -q &quot;list(APPEND CMAKE_PREFIX_PATH /home/kami/libs/cpp/libtorch/)&quot; &quot;$CMAKELISTS_FILE&quot;; then
+    sed -i &quot;s|list(APPEND CMAKE_PREFIX_PATH /home/kami/libs/cpp/libtorch/)|list(APPEND CMAKE_PREFIX_PATH $LIBTORCH_PATH)|&quot; &quot;$CMAKELISTS_FILE&quot;
+    echo &quot;Updated CMakeLists.txt with LibTorch path: $LIBTORCH_PATH&quot;
+else
+    echo &quot;Warning: Could not find 'list(APPEND CMAKE_PREFIX_PATH /home/kami/libs/cpp/libtorch/)' in $CMAKELISTS_FILE.&quot;
+    echo &quot;Please manually add 'list(APPEND CMAKE_PREFIX_PATH $LIBTORCH_PATH)' to $CMAKELISTS_FILE.&quot;
+fi
+
+case &quot;$SYSTEM&quot; in
+    ubuntu|mint|arch|manjaro)
+        echo &quot;Running sudo make install...&quot;
+        sudo make install
+        if [[ $? -ne 0 ]]; then
+            echo &quot;Error: 'sudo make install' failed.&quot;
+            exit 1
+        fi
+        ;;
+    macos)
+        echo &quot;Running make install...&quot;
+        make install
+        if [[ $? -ne 0 ]]; then
+            echo &quot;Error: 'make install' failed.&quot;
+            exit 1
+        fi
+        ;;
+    windows)
+        echo &quot;Windows detected. Running CMake build and install...&quot;
+        if [[ -d &quot;build&quot; ]]; then
+            rm -rf build
+        fi
+        mkdir build &amp;&amp; cd build
+        cmake ..
+        cmake --build . --config Release
+        cmake --install .
+        if [[ $? -ne 0 ]]; then
+            echo &quot;Error: CMake build/install failed.&quot;
+            exit 1
+        fi
+        cd ..
+        ;;
+esac
+
+echo &quot;Installation and configuration completed successfully.&quot;
+</code></pre>
+<p><strong>Functionality</strong>:
+- <strong>LibTorch Prompt</strong>:
+  - Informs the user that LibTorch must be manually downloaded.
+  - Prompts for an absolute path to the LibTorch installation.
+  - Allows the user to exit by typing <code>quit</code> or <code>exit</code>.
+- <strong>Path Validation Loop</strong>:
+  - Checks if the path is absolute:
+    - Linux/macOS: Must start with <code>/</code>.
+    - Windows: Must start with a drive letter (e.g., <code>C:\</code>).
+  - Converts Windows paths to CMake-compatible format (replaces <code>\</code> with <code>/</code>).
+  - Verifies the LibTorch installation by checking for:
+    - Linux: <code>lib/libtorch.so</code>
+    - macOS: <code>lib/libtorch.dylib</code>
+    - Windows: <code>lib/torch.lib</code>
+  - Loops until a valid path is provided or the user quits.
+- <strong>CMakeLists.txt Update</strong>:
+  - Checks for <code>CMakeLists.txt</code> in the current directory.
+  - Prompts for its path if not found and validates the provided path.
+  - Backs up <code>CMakeLists.txt</code> to <code>CMakeLists.txt.bak</code>.
+  - Replaces <code>list(APPEND CMAKE_PREFIX_PATH /home/kami/libs/cpp/libtorch/)</code> with <code>list(APPEND CMAKE_PREFIX_PATH $LIBTORCH_PATH)</code>.
+  - Warns the user if the target line is not found, instructing them to add the path manually.
+- <strong>Build/Install</strong>:
+  - Linux: Runs <code>sudo make install</code> (requires sudo privileges).
+  - macOS: Runs <code>make install</code> (no sudo needed).
+  - Windows: Creates a <code>build</code> directory, runs <code>cmake ..</code>, builds with <code>cmake --build . --config Release</code>, and installs with <code>cmake --install .</code>.
+  - Checks the exit status and exits with an error if the build/install fails.</p>
+<h2 id="error-handling">Error Handling</h2>
+<ul>
+<li><strong>Unsupported System</strong>: Exits if the OS is not Ubuntu, Mint, Arch, Manjaro, macOS, or Windows.</li>
+<li><strong>Package Manager Missing</strong>:</li>
+<li>Installs Homebrew, Chocolatey, or vcpkg if not found.</li>
+<li>Exits if installation fails, providing manual installation URLs.</li>
+<li><strong>Invalid LibTorch Path</strong>:</li>
+<li>Loops with specific error messages for non-absolute paths or missing LibTorch libraries.</li>
+<li>Allows the user to quit with <code>quit</code>/<code>exit</code>.</li>
+<li><strong>CMakeLists.txt Issues</strong>:</li>
+<li>Prompts for the file path if not found in the current directory.</li>
+<li>Exits if the provided path is invalid.</li>
+<li>Warns if the LibTorch path line is not found in <code>CMakeLists.txt</code>.</li>
+<li><strong>Build/Install Failures</strong>:</li>
+<li>Checks the exit status of <code>make install</code> or CMake commands.</li>
+<li>Exits with an error message if the command fails.</li>
+</ul>
+<h2 id="platform-specific-notes">Platform-Specific Notes</h2>
+<ul>
+<li><strong>Linux</strong>:</li>
+<li>Requires <code>sudo</code> for <code>apt</code>, <code>pacman</code>, and <code>make install</code>.</li>
+<li>Assumes <code>make</code> and <code>cmake</code> are installed (can be added to dependencies if needed).</li>
+<li><strong>macOS</strong>:</li>
+<li>Homebrew installations may require Xcode Command Line Tools.</li>
+<li>No <code>sudo</code> needed for <code>make install</code> in most cases.</li>
+<li><strong>Windows</strong>:</li>
+<li>Requires PowerShell and a C++ compiler (e.g., MSVC).</li>
+<li>vcpkg is used for <code>libtar</code> and requires <code>git</code> and a compiler.</li>
+<li>CMake build assumes a CMake-based project; adjust if using another build system.</li>
+<li>Paths are converted to use forward slashes for CMake compatibility.</li>
+</ul>
+<h2 id="example-run-linux">Example Run (Linux)</h2>
+<pre><code class="language-bash">$ ./install_dependencies.sh
+Detected system: ubuntu
+Updating apt package lists...
+Package libcurl4-openssl-dev is already installed
+Package libopencv-dev not found, installing...
+...
+LibTorch is not available via package managers. Please download and install manually from https://pytorch.org/get-started/locally/
+Enter the absolute path to your LibTorch installation (e.g., /home/user/libtorch or C:\\libtorch, or type 'quit' to exit): libtorch
+Error: Path must be absolute (start with '/'). Please try again.
+Enter the absolute path to your LibTorch installation (e.g., /home/user/libtorch or C:\\libtorch, or type 'quit' to exit): /home/user/invalid
+Error: LibTorch not found at /home/user/invalid. Ensure the path contains a valid LibTorch installation with 'lib/libtorch.so'.
+Enter the absolute path to your LibTorch installation (e.g., /home/user/libtorch or C:\\libtorch, or type 'quit' to exit): /home/user/libtorch
+Valid LibTorch path provided: /home/user/libtorch
+Backed up CMakeLists.txt to CMakeLists.txt.bak
+Updated CMakeLists.txt with LibTorch path: /home/user/libtorch
+Running sudo make install...
+[sudo] password for user: 
+...
+Installation and configuration completed successfully.
+</code></pre>
+<h2 id="example-run-windows">Example Run (Windows)</h2>
+<pre><code class="language-bash">$ ./install_dependencies.sh
+Detected system: windows
+Refreshing Chocolatey environment...
+Package curl is already installed
+Package opencv not found, installing via Chocolatey...
+...
+LibTorch is not available via package managers. Please download and install manually from https://pytorch.org/get-started/locally/
+Enter the absolute path to your LibTorch installation (e.g., /home/user/libtorch or C:\\libtorch, or type 'quit' to exit): C:\invalid
+Error: LibTorch not found at C:\invalid. Ensure the path contains a valid LibTorch installation with 'lib/torch.lib'.
+Enter the absolute path to your LibTorch installation (e.g., /home/user/libtorch or C:\\libtorch, or type 'quit' to exit): C:\libtorch
+Valid LibTorch path provided: C:/libtorch
+Backed up CMakeLists.txt to CMakeLists.txt.bak
+Updated CMakeLists.txt with LibTorch path: C:/libtorch
+Windows detected. Running CMake build and install...
+...
+Installation and configuration completed successfully.
+</code></pre>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<ul>
+<li><strong>Package Installation Fails</strong>:</li>
+<li>Ensure internet access and sufficient permissions.</li>
+<li>Check package manager logs (e.g., <code>/var/log/apt</code>, Chocolatey logs).</li>
+<li><strong>LibTorch Path Invalid</strong>:</li>
+<li>Verify the LibTorch installation contains the expected library file.</li>
+<li>Download a fresh copy from <a href="https://pytorch.org/">https://pytorch.org/</a> if needed.</li>
+<li><strong>CMakeLists.txt Not Found</strong>:</li>
+<li>Ensure the project directory contains <code>CMakeLists.txt</code> or provide the correct path.</li>
+<li><strong>Build/Install Fails</strong>:</li>
+<li>Check for missing build tools (<code>make</code>, <code>cmake</code>, MSVC).</li>
+<li>Verify the project’s CMake configuration is correct.</li>
+<li><strong>Windows CMake Issues</strong>:</li>
+<li>Ensure a C++ compiler is installed (e.g., Visual Studio Build Tools).</li>
+<li>Run the script in a PowerShell-enabled environment.</li>
+</ul>
+<h2 id="future-improvements">Future Improvements</h2>
+<ul>
+<li><strong>Flexible CMakeLists.txt Matching</strong>: Use regex to match variations of the <code>CMAKE_PREFIX_PATH</code> line.</li>
+<li><strong>LibTorch Version Check</strong>: Validate the LibTorch version by parsing <code>version.txt</code>.</li>
+<li><strong>Custom Build Options</strong>: Allow users to specify build configurations (e.g., Debug vs. Release on Windows).</li>
+<li><strong>Additional Dependencies</strong>: Add checks for <code>cmake</code>, <code>make</code>, or compilers if missing.</li>
+<li><strong>Path Normalization</strong>: Trim whitespace or normalize LibTorch paths to handle edge cases.</li>
+</ul>
+<h2 id="license">License</h2>
+<p>This script is provided as-is without warranty. Users are responsible for ensuring compatibility with their systems and projects. Contact the author for contributions or issues.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

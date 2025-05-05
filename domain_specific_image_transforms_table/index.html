@@ -1,0 +1,4635 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kamisaberi.github.io/xtorch/domain_specific_image_transforms_table/">
+      
+      
+        <link rel="prev" href="../contributing/">
+      
+      
+        <link rel="next" href="../examples/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Domain specific image transforms table - xTorch</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="xTorch" class="md-header__button md-logo" aria-label="xTorch" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            xTorch
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Domain specific image transforms table
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/kamisaberi/xtorch" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="xTorch" class="md-nav__button md-logo" aria-label="xTorch" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    xTorch
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/kamisaberi/xtorch" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00_datasets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    00 datasets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_datasets_for_xtorch_library_not_in_pytorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Datasets for xtorch Library Not in PyTorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_datasets_for_xtorch_library_not_in_pytorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Additional Datasets for xtorch Library Not in PyTorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_machine_learning_datasets_for_%20xtorch_library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Machine Learning Datasets Similar to IRIS for xtorch Library
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_comprehensive_machine_learning_datasets_for_xtorch_library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comprehensive Machine Learning Datasets for xtorch Library
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_summary_of_machine_learning_datasets_for_xtorch_library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Summary of Machine Learning Datasets for xtorch Library
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contributing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domain specific image transforms table
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../list_of_albumentations_image_transforms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    List of albumentations image transforms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../list_of_opencV_image_transforms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    list of opencV image transforms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Api
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            Api
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/ref/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    REF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_17_3" id="__nav_17_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cpp
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_17_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17_3">
+            <span class="md-nav__icon md-icon"></span>
+            Cpp
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/cpp/core_classes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    core_classes.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/cpp/native/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    native.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/cpp/tensor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    tensor.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_17_4" id="__nav_17_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_17_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17_4">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/python/core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    core.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/python/nn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    nn.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/python/optim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    optim.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/python/utils/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    utils.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Community
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../community/code_of_conduct/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    code_of_conduct.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../community/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    faq.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Developer
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19">
+            <span class="md-nav__icon md-icon"></span>
+            Developer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer/benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    benchmarks.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer/contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    contributing.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developer/testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    testing.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20" >
+        
+          
+          <label class="md-nav__link" for="__nav_20" id="__nav_20_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ecosystem
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_20">
+            <span class="md-nav__icon md-icon"></span>
+            Ecosystem
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ecosystem/integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    integration.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ecosystem/nlp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    nlp.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ecosystem/vision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    vision.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_21" id="__nav_21_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/0_examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0 examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/comprehensive_example_titles_for_xtorch_library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comprehensive Example Titles for xtorch Library
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/comprehensive_example_titles_for_xtorch_library_with_medical_and_biological_applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comprehensive Example Titles for xtorch Library with Medical and Biological Applications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_4" id="__nav_21_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Audio and speech
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_4">
+            <span class="md-nav__icon md-icon"></span>
+            Audio and speech
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/audio_and_speech/4_1_speech_recognition_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4 1 speech recognition examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/audio_and_speech/4_2_audio_classification_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4 2 audio classification examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_5" id="__nav_21_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Computer vision
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_5">
+            <span class="md-nav__icon md-icon"></span>
+            Computer vision
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/computer_vision/2_1_image_classification_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 1 image classification examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/computer_vision/2_2_object_detection_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 2 object detection examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/computer_vision/2_3_segmentation_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 3 segmentation examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/computer_vision/2_4_image_generation_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 4 image generation examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_6" id="__nav_21_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Data handling and preprocessing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_6">
+            <span class="md-nav__icon md-icon"></span>
+            Data handling and preprocessing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/data_handling_and_preprocessing/10_1_datasets_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10 1 datasets examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/data_handling_and_preprocessing/10_2_data_loaders_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10 2 data loaders examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/data_handling_and_preprocessing/10_3_transforms_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10 3 transforms examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_7" id="__nav_21_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Deployment and production
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_7">
+            <span class="md-nav__icon md-icon"></span>
+            Deployment and production
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/deployment_and_production/9_1_model_serialization_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    9 1 model serialization examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/deployment_and_production/9_2_inference_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    9 2 inference examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/deployment_and_production/9_3_web_services_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    9 3 web services examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_8" id="__nav_21_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Distributed and parallel training
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_8">
+            <span class="md-nav__icon md-icon"></span>
+            Distributed and parallel training
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/distributed_and_parallel_training/13_1_data_parallelism_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    13 1 data parallelism examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/distributed_and_parallel_training/13_2_model_parallelism_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    13 2 model parallelism examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/distributed_and_parallel_training/13_3_distributed_training_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    13 3 distributed training examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_9" id="__nav_21_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Generative models
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_9">
+            <span class="md-nav__icon md-icon"></span>
+            Generative models
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/generative_models/8_1_autoencoders_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    8 1 autoencoders examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/generative_models/8_2_gans_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    8 2 gans examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/generative_models/8_3_diffusion_models_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    8 3 diffusion models examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_10" id="__nav_21_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_10">
+            <span class="md-nav__icon md-icon"></span>
+            Getting started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/getting_started/1_getting_started_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1 getting started examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_11" id="__nav_21_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Graph neural networks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_11">
+            <span class="md-nav__icon md-icon"></span>
+            Graph neural networks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/graph_neural_networks/7_1_node_level_tasks_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7 1 node level tasks examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/graph_neural_networks/7_2_graph_level_tasks_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7 2 graph level tasks examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_12" id="__nav_21_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Natural language processing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_12">
+            <span class="md-nav__icon md-icon"></span>
+            Natural language processing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/natural_language_processing/3_1_text_classification_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3 1 text classification examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/natural_language_processing/3_2_sequence_to_sequence_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3 2 sequence to sequence examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/natural_language_processing/3_3_language_modeling_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3 3 language modeling examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_13" id="__nav_21_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Optimization and training techniques
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_13">
+            <span class="md-nav__icon md-icon"></span>
+            Optimization and training techniques
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/optimization_and_training_techniques/11_1_optimizers_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    11 1 optimizers examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/optimization_and_training_techniques/11_2_learning_rate_schedulers_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    11 2 learning rate schedulers examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/optimization_and_training_techniques/11_3_regularization_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    11 3 regularization examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_14" id="__nav_21_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Performance and benchmarking
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_14">
+            <span class="md-nav__icon md-icon"></span>
+            Performance and benchmarking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/performance_and_benchmarking/12_1_speed_optimization_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    12 1 speed optimization examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/performance_and_benchmarking/12_2_memory_management_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    12 2 memory management examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_15" id="__nav_21_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Reinforcement learning
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_15">
+            <span class="md-nav__icon md-icon"></span>
+            Reinforcement learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/reinforcement_learning/6_1_value_based_methods_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6 1 value based methods examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/reinforcement_learning/6_2_policy_based_methods_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6 2 policy based methods examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_16" id="__nav_21_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Time series and sequential data
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_16">
+            <span class="md-nav__icon md-icon"></span>
+            Time series and sequential data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/time_series_and_sequential_data/5_1_forecasting_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5 1 forecasting examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/time_series_and_sequential_data/5_2_anomaly_detection_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5 2 anomaly detection examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_22" >
+        
+          
+          <label class="md-nav__link" for="__nav_22" id="__nav_22_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_22">
+            <span class="md-nav__icon md-icon"></span>
+            Getting started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    xTorch Installation Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started/migration_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    migration_guide.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started/quickstart_tutorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    quickstart_tutorial.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_23" >
+        
+          
+          <label class="md-nav__link" for="__nav_23" id="__nav_23_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_23">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/System%20Dependency%20Installer%20Script%20Documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Dependency Installer Script Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_24" >
+        
+          
+          <label class="md-nav__link" for="__nav_24" id="__nav_24_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Publications
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_24">
+            <span class="md-nav__icon md-icon"></span>
+            Publications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publications/extensive_list_of_deep_learning_papers_for_pytorch_on_papar_with_code_com_rewrite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Extensive List of Deep Learning Papers for PyTorch Rewrite
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../publications/extensive_list_of_deep_learning_papers_for_pytorch_rewrite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Extensive List of Deep Learning Papers for PyTorch Rewrite
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_25" >
+        
+          
+          <label class="md-nav__link" for="__nav_25" id="__nav_25_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Roadmaps
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_25_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_25">
+            <span class="md-nav__icon md-icon"></span>
+            Roadmaps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../roadmaps/datasets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Transforms Roadmap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../roadmaps/models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Datasets Roadmap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../roadmaps/transforms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Transforms Roadmap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_26" >
+        
+          
+          <label class="md-nav__link" for="__nav_26" id="__nav_26_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tutorials
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_26_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_26">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_26_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_26_2" id="__nav_26_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Advanced
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_26_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_26_2">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/advanced/cpp_extensions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    cpp_extensions.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/advanced/jit_compilation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    jit_compilation.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_26_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_26_3" id="__nav_26_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Basics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_26_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_26_3">
+            <span class="md-nav__icon md-icon"></span>
+            Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/basics/custom_layers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    custom_layers.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/basics/hello_world/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hello World
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/basics/working_with_tensors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    working_with_tensors.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_26_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_26_4" id="__nav_26_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Intermediate
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_26_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_26_4">
+            <span class="md-nav__icon md-icon"></span>
+            Intermediate
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/intermediate/gpu_acceleration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    gpu_acceleration.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/intermediate/mixed_precision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    mixed_precision.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Domain specific image transforms table</h1>
+
+<table>
+<thead>
+<tr>
+<th><strong>Domain</strong></th>
+<th><strong>Transform</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Available in PyTorch?</strong></th>
+<th><strong>Library/Tool for Implementation</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Geospatial/Weather</strong></td>
+<td>Streak-Based Rain</td>
+<td>Simulates linear rain streaks across the image, mimicking heavy rainfall.</td>
+<td>No</td>
+<td>Albumentations, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>ParticleRain</td>
+<td>Simulates individual rain droplets for light rain effects.</td>
+<td>No</td>
+<td>Albumentations, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>FoggyRain</td>
+<td>Combines rain with fog, reducing visibility with a misty overlay.</td>
+<td>No</td>
+<td>Albumentations, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>HomogeneousFog</td>
+<td>Applies a uniform fog layer, reducing contrast evenly across the image.</td>
+<td>No</td>
+<td>Albumentations (RandomFog)</td>
+</tr>
+<tr>
+<td></td>
+<td>DepthBasedFog</td>
+<td>Simulates fog with intensity varying by depth, denser in farther regions.</td>
+<td>No</td>
+<td>Custom code, numpy</td>
+</tr>
+<tr>
+<td></td>
+<td>PatchyFog</td>
+<td>Applies uneven fog patches, creating irregular visibility reductions.</td>
+<td>No</td>
+<td>Albumentations, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>FallingSnow</td>
+<td>Simulates snowflakes falling across the image, varying in size and density.</td>
+<td>No</td>
+<td>Albumentations (RandomSnow)</td>
+</tr>
+<tr>
+<td></td>
+<td>AccumulatedSnow</td>
+<td>Simulates snow buildup on surfaces, creating white patches.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Blizzard</td>
+<td>Simulates intense snow with high density and motion blur.</td>
+<td>No</td>
+<td>Albumentations, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>SunFlare</td>
+<td>Simulates bright spots from sunlight reflections, often circular or streaky.</td>
+<td>No</td>
+<td>Albumentations (RandomSunFlare)</td>
+</tr>
+<tr>
+<td></td>
+<td>DynamicShadows</td>
+<td>Simulates moving shadows from clouds or objects, varying in intensity.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>WetGround</td>
+<td>Simulates reflective, glossy ground surfaces due to rain.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>VegetationMotion</td>
+<td>Simulates wind-induced motion in plants or trees, adding blur or distortion.</td>
+<td>No</td>
+<td>Custom code, numpy</td>
+</tr>
+<tr>
+<td></td>
+<td>DustSandClouds</td>
+<td>Simulates dust or sand clouds, reducing visibility with a hazy overlay.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Radiometric Calibration</td>
+<td>Converts raw satellite/radar data to physical units (e.g., reflectance).</td>
+<td>No</td>
+<td>rasterio, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Atmospheric Correction</td>
+<td>Removes atmospheric effects (e.g., scattering, absorption) from imagery.</td>
+<td>No</td>
+<td>Py6S, sen2cor</td>
+</tr>
+<tr>
+<td></td>
+<td>Cloud Masking</td>
+<td>Segments cloud regions from clear-sky areas.</td>
+<td>No</td>
+<td>scikit-image, custom models</td>
+</tr>
+<tr>
+<td></td>
+<td>AppendNDVI</td>
+<td>Adds Normalized Difference Vegetation Index for vegetation analysis.</td>
+<td>No</td>
+<td>TorchGeo</td>
+</tr>
+<tr>
+<td><strong>Medical Imaging</strong></td>
+<td>Motion Artifact</td>
+<td>Simulates blurring from patient movement during MRI/CT scans.</td>
+<td>No</td>
+<td>MONAI, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Noise Injection</td>
+<td>Adds speckle or Gaussian noise to mimic sensor imperfections.</td>
+<td>No</td>
+<td>MONAI (RandGaussianNoised)</td>
+</tr>
+<tr>
+<td></td>
+<td>Metal Artifact</td>
+<td>Simulates streaking from metallic implants in CT images.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Contrast Variation</td>
+<td>Simulates variations in contrast agent uptake, altering intensity.</td>
+<td>No</td>
+<td>MONAI, Albumentations</td>
+</tr>
+<tr>
+<td></td>
+<td>Tissue Deformation</td>
+<td>Simulates elastic tissue deformation due to pressure or movement.</td>
+<td>Yes</td>
+<td>torchvision.transforms (ElasticTransform)</td>
+</tr>
+<tr>
+<td></td>
+<td>Scan Underexposure</td>
+<td>Simulates low-intensity scans from improper exposure settings.</td>
+<td>No</td>
+<td>Albumentations, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Ghosting Artifact</td>
+<td>Simulates ghost-like artifacts from motion in MRI scans.</td>
+<td>No</td>
+<td>Custom code, numpy</td>
+</tr>
+<tr>
+<td></td>
+<td>Ring Artifact</td>
+<td>Simulates concentric ring patterns in CT scans from detector issues.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Slice Misalignment</td>
+<td>Simulates misaligned slices in 3D medical imaging.</td>
+<td>No</td>
+<td>MONAI, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Partial Volume Effect</td>
+<td>Simulates blurred boundaries between tissues in low-resolution scans.</td>
+<td>No</td>
+<td>Custom code, numpy</td>
+</tr>
+<tr>
+<td></td>
+<td>Blooming Artifact</td>
+<td>Simulates intensity overflow in MRI due to high signal areas.</td>
+<td>No</td>
+<td>Custom code, numpy</td>
+</tr>
+<tr>
+<td></td>
+<td>Chemical Shift Artifact</td>
+<td>Simulates misregistration of fat and water signals in MRI.</td>
+<td>No</td>
+<td>Custom code, numpy</td>
+</tr>
+<tr>
+<td></td>
+<td>Gibbs Ringing</td>
+<td>Simulates oscillatory artifacts near sharp edges in MRI.</td>
+<td>No</td>
+<td>Custom code, numpy</td>
+</tr>
+<tr>
+<td></td>
+<td>Beam Hardening</td>
+<td>Simulates intensity variations in CT due to dense materials.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Truncation Artifact</td>
+<td>Simulates incomplete data at image edges in CT/MRI.</td>
+<td>No</td>
+<td>Custom code, numpy</td>
+</tr>
+<tr>
+<td><strong>Autonomous Driving</strong></td>
+<td>Lens Flare</td>
+<td>Simulates bright spots from sunlight hitting the camera lens.</td>
+<td>No</td>
+<td>Albumentations (RandomSunFlare)</td>
+</tr>
+<tr>
+<td></td>
+<td>Motion Blur</td>
+<td>Simulates blur from fast-moving vehicles or camera shake.</td>
+<td>No</td>
+<td>Albumentations</td>
+</tr>
+<tr>
+<td></td>
+<td>Dirt on Lens</td>
+<td>Simulates dirt or smudges on camera lenses, reducing clarity.</td>
+<td>No</td>
+<td>Albumentations, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Glare Effect</td>
+<td>Simulates reflections from wet roads or glass surfaces.</td>
+<td>No</td>
+<td>Albumentations, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Headlight Glare</td>
+<td>Simulates bright glare from oncoming vehicle headlights at night.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Sensor Noise</td>
+<td>Simulates noise in low-light or poor-quality camera sensors.</td>
+<td>No</td>
+<td>Albumentations</td>
+</tr>
+<tr>
+<td></td>
+<td>Occlusion by Debris</td>
+<td>Simulates debris (e.g., leaves, bugs) partially blocking the camera.</td>
+<td>No</td>
+<td>Albumentations, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Vignetting</td>
+<td>Simulates darkened edges due to lens limitations.</td>
+<td>No</td>
+<td>Albumentations, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Overexposure</td>
+<td>Simulates overly bright images from intense lighting conditions.</td>
+<td>No</td>
+<td>Albumentations</td>
+</tr>
+<tr>
+<td></td>
+<td>Underexposure</td>
+<td>Simulates overly dark images from low-light conditions.</td>
+<td>No</td>
+<td>Albumentations</td>
+</tr>
+<tr>
+<td></td>
+<td>Lens Distortion</td>
+<td>Simulates barrel or pincushion distortion from camera lenses.</td>
+<td>No</td>
+<td>OpenCV, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Chromatic Aberration</td>
+<td>Simulates color fringing due to lens imperfections.</td>
+<td>No</td>
+<td>OpenCV, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Rain Drops on Lens</td>
+<td>Simulates water droplets on camera lenses, distorting patches.</td>
+<td>No</td>
+<td>Albumentations, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Insect Splatter</td>
+<td>Simulates insect residue on camera lenses, creating irregular occlusions.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Road Dust</td>
+<td>Simulates dust clouds kicked up by vehicles, reducing visibility.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td><strong>Industrial Inspection</strong></td>
+<td>Surface Scratches</td>
+<td>Simulates scratch marks on manufactured surfaces.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Rust Spots</td>
+<td>Simulates rust or corrosion on metal surfaces.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Weld Imperfections</td>
+<td>Simulates irregular weld lines or burns on metal joints.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Dust Contamination</td>
+<td>Simulates dust particles on surfaces or lenses.</td>
+<td>No</td>
+<td>Albumentations, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Paint Bubbles</td>
+<td>Simulates bubbles or peeling in painted surfaces.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Crack Patterns</td>
+<td>Simulates cracks or fractures in materials.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Oil Stains</td>
+<td>Simulates oily residue or stains on surfaces.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Surface Pitting</td>
+<td>Simulates small pits or dents on metal surfaces.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Misalignment Marks</td>
+<td>Simulates marks from improper assembly or machining.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Burn Marks</td>
+<td>Simulates burns from overheating or laser cutting.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Material Discoloration</td>
+<td>Simulates color changes due to heat or chemical exposure.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Surface Warping</td>
+<td>Simulates warping or bending of materials.</td>
+<td>No</td>
+<td>Custom code, numpy</td>
+</tr>
+<tr>
+<td></td>
+<td>Tool Marks</td>
+<td>Simulates scratches or dents from machining tools.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Coating Unevenness</td>
+<td>Simulates uneven coating application, creating patchy textures.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Foreign Particle Inclusion</td>
+<td>Simulates embedded foreign particles in materials.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td><strong>Document Analysis</strong></td>
+<td>Ink Bleed</td>
+<td>Simulates ink spreading into paper fibers, blurring text.</td>
+<td>No</td>
+<td>OpenCV, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Paper Crease</td>
+<td>Simulates creases or folds in scanned documents, distorting text.</td>
+<td>No</td>
+<td>OpenCV, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Watermark Overlay</td>
+<td>Simulates faint watermarks or stamps on documents.</td>
+<td>No</td>
+<td>OpenCV, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Coffee Stains</td>
+<td>Simulates brown stains from spills on paper.</td>
+<td>No</td>
+<td>OpenCV, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Faded Text</td>
+<td>Simulates faded ink or degraded text in old documents.</td>
+<td>No</td>
+<td>OpenCV, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Shadow Overlay</td>
+<td>Simulates shadows from uneven lighting during scanning.</td>
+<td>No</td>
+<td>Albumentations, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Paper Yellowing</td>
+<td>Simulates yellowed paper due to aging, altering color tones.</td>
+<td>No</td>
+<td>OpenCV, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Torn Edges</td>
+<td>Simulates ripped or torn document edges, creating irregular borders.</td>
+<td>No</td>
+<td>OpenCV, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Smudged Text</td>
+<td>Simulates smudged ink or fingerprints, blurring text.</td>
+<td>No</td>
+<td>OpenCV, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Scanner Artifacts</td>
+<td>Simulates streaks or lines from dirty scanner beds.</td>
+<td>No</td>
+<td>OpenCV, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Fold Shadows</td>
+<td>Simulates shadows along folds or creases in documents.</td>
+<td>No</td>
+<td>OpenCV, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Ink Splatter</td>
+<td>Simulates random ink splashes or spills on documents.</td>
+<td>No</td>
+<td>OpenCV, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Paper Texture</td>
+<td>Simulates textured paper surfaces, adding graininess.</td>
+<td>No</td>
+<td>OpenCV, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Staple Marks</td>
+<td>Simulates holes or dents from staples or bindings.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Handwritten Annotations</td>
+<td>Simulates handwritten notes or marks over text.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td><strong>Agriculture</strong></td>
+<td>Leaf Wilting</td>
+<td>Simulates drooping or wilted leaves due to drought or disease.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Pest Damage</td>
+<td>Simulates bite marks or holes from insects on leaves.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Soil Erosion</td>
+<td>Simulates eroded soil patches in field imagery.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Frost Damage</td>
+<td>Simulates frost effects on crops or leaves, adding white patches.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Fungal Spots</td>
+<td>Simulates spots or discoloration from fungal infections.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Overwatering Effect</td>
+<td>Simulates waterlogged soil or plant damage from excess water.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Sunburn Spots</td>
+<td>Simulates burned or discolored leaves from excessive sun exposure.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Weed Overgrowth</td>
+<td>Simulates weeds interspersed with crops in imagery.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Nutrient Deficiency</td>
+<td>Simulates yellowing or stunted growth due to nutrient lack.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Pollen Dust</td>
+<td>Simulates pollen accumulation on leaves or crops, adding speckles.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Hail Damage</td>
+<td>Simulates dents or tears on leaves from hail impact.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Wind Damage</td>
+<td>Simulates bent or torn leaves from strong winds.</td>
+<td>No</td>
+<td>Custom code, numpy</td>
+</tr>
+<tr>
+<td></td>
+<td>Animal Grazing Marks</td>
+<td>Simulates bite marks or trampled areas from grazing animals.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Irrigation Unevenness</td>
+<td>Simulates uneven water distribution, creating patchy growth patterns.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Chemical Burn</td>
+<td>Simulates leaf damage from pesticide or fertilizer overuse.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td><strong>Remote Sensing</strong></td>
+<td>Sandstorm Obscuration</td>
+<td>Simulates reduced visibility from sand or dust storms.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Urban Heat Island Effect</td>
+<td>Simulates increased brightness in urban areas due to heat.</td>
+<td>No</td>
+<td>Custom code, numpy</td>
+</tr>
+<tr>
+<td></td>
+<td>Oil Spill Contamination</td>
+<td>Simulates dark, irregular patches from oil spills on water.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Algal Bloom</td>
+<td>Simulates green or brown patches from algae in water bodies.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Deforestation Scars</td>
+<td>Simulates cleared patches in forested areas.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Volcanic Ash Cloud</td>
+<td>Simulates ash clouds reducing visibility in satellite imagery.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Wildfire Smoke</td>
+<td>Simulates smoke haze from wildfires, altering visibility.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Snow Melt Patterns</td>
+<td>Simulates uneven snow melting, creating patchy textures.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Glacier Retreat</td>
+<td>Simulates reduced ice coverage in glacial areas.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Coastal Erosion</td>
+<td>Simulates altered coastlines due to erosion.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Landslide Debris</td>
+<td>Simulates debris and disturbed soil from landslides.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Flood Inundation</td>
+<td>Simulates water coverage over land from flooding.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Desertification</td>
+<td>Simulates increased arid patches in vegetation.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Mining Scars</td>
+<td>Simulates disturbed land from mining activities.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Seasonal Vegetation Change</td>
+<td>Simulates color shifts in vegetation due to seasonal changes.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td><strong>Retail Imaging</strong></td>
+<td>Shelf Clutter</td>
+<td>Simulates cluttered shelves with misplaced items.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Product Damage</td>
+<td>Simulates dents, tears, or crushed packaging on products.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Label Fading</td>
+<td>Simulates faded or worn product labels.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Lighting Glare</td>
+<td>Simulates reflections from store lighting on packaging.</td>
+<td>No</td>
+<td>Albumentations, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Dust on Products</td>
+<td>Simulates dust accumulation on products or shelves.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Sticker Residue</td>
+<td>Simulates sticky residue or partial stickers on products.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Shadow from Shoppers</td>
+<td>Simulates shadows from customers or staff over products.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Barcode Damage</td>
+<td>Simulates scratched or smudged barcodes, hindering scanning.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Misaligned Labels</td>
+<td>Simulates crooked or misaligned product labels.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Spill Stains</td>
+<td>Simulates liquid spills or stains on products or shelves.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Overcrowded Shelves</td>
+<td>Simulates tightly packed shelves, obscuring products.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Torn Packaging</td>
+<td>Simulates ripped or torn product packaging.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Expired Product Discoloration</td>
+<td>Simulates color changes in expired goods (e.g., food).</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Display Wear</td>
+<td>Simulates worn-out or scratched store displays.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Customer Handling Marks</td>
+<td>Simulates fingerprints or smudges from customer handling.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td><strong>Surveillance</strong></td>
+<td>Camera Glitch</td>
+<td>Simulates pixelated or corrupted frames from camera malfunctions.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Low-Light Noise</td>
+<td>Simulates noise in low-light surveillance footage.</td>
+<td>No</td>
+<td>Albumentations, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Motion Smear</td>
+<td>Simulates streaking from fast-moving objects in footage.</td>
+<td>No</td>
+<td>Albumentations, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Lens Fogging</td>
+<td>Simulates fogged lenses from humidity or temperature changes.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Dust on Lens</td>
+<td>Simulates dust particles on camera lenses, creating specks.</td>
+<td>No</td>
+<td>Albumentations, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Infrared Overexposure</td>
+<td>Simulates overly bright areas in infrared footage.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Shadow Movement</td>
+<td>Simulates moving shadows from lights or objects.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Weather Obscuration</td>
+<td>Simulates rain, snow, or fog obscuring surveillance footage.</td>
+<td>No</td>
+<td>Albumentations, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Glare from Lights</td>
+<td>Simulates glare from streetlights or vehicle lights.</td>
+<td>No</td>
+<td>Albumentations, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Camera Shake</td>
+<td>Simulates vibrations or shaking of the camera.</td>
+<td>No</td>
+<td>Custom code, numpy</td>
+</tr>
+<tr>
+<td></td>
+<td>Lens Scratch</td>
+<td>Simulates scratches on camera lenses, creating linear artifacts.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Privacy Blur</td>
+<td>Simulates blurred regions for privacy (e.g., faces, license plates).</td>
+<td>No</td>
+<td>OpenCV, custom code</td>
+</tr>
+<tr>
+<td></td>
+<td>Signal Interference</td>
+<td>Simulates static or interference patterns in footage.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Frame Dropout</td>
+<td>Simulates missing or corrupted frames in video feeds.</td>
+<td>No</td>
+<td>Custom code, numpy</td>
+</tr>
+<tr>
+<td></td>
+<td>Overheating Artifacts</td>
+<td>Simulates artifacts from camera overheating, like color shifts.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td><strong>Astronomy</strong></td>
+<td>Cosmic Ray Hits</td>
+<td>Simulates bright streaks or spots from cosmic rays on telescope images.</td>
+<td>No</td>
+<td>Custom code, numpy</td>
+</tr>
+<tr>
+<td></td>
+<td>Star Trails</td>
+<td>Simulates streaks from stars due to long exposures or tracking errors.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Atmospheric Turbulence</td>
+<td>Simulates blurring from air turbulence, distorting star shapes.</td>
+<td>No</td>
+<td>Custom code, numpy</td>
+</tr>
+<tr>
+<td></td>
+<td>Light Pollution</td>
+<td>Simulates background glow from artificial lights, reducing contrast.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Telescope Vignetting</td>
+<td>Simulates darkened edges due to telescope optics.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Dust on Optics</td>
+<td>Simulates dust specks on telescope lenses or mirrors.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Sensor Hot Pixels</td>
+<td>Simulates bright defective pixels in telescope sensors.</td>
+<td>No</td>
+<td>Custom code, numpy</td>
+</tr>
+<tr>
+<td></td>
+<td>Diffraction Spikes</td>
+<td>Simulates star-shaped spikes from telescope support structures.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Ghost Reflections</td>
+<td>Simulates faint reflections from bright stars or planets.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Saturation Blooming</td>
+<td>Simulates overflow of bright starlight, creating halos.</td>
+<td>No</td>
+<td>Custom code, numpy</td>
+</tr>
+<tr>
+<td></td>
+<td>Tracking Error Smear</td>
+<td>Simulates elongated stars from telescope tracking errors.</td>
+<td>No</td>
+<td>Custom code, numpy</td>
+</tr>
+<tr>
+<td></td>
+<td>Cloud Cover</td>
+<td>Simulates partial or full cloud obstruction in images.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Background Gradient</td>
+<td>Simulates uneven background illumination from moonlight or city lights.</td>
+<td>No</td>
+<td>Custom code, numpy</td>
+</tr>
+<tr>
+<td></td>
+<td>Chromatic Distortion</td>
+<td>Simulates color shifts from telescope optics misalignment.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+<tr>
+<td></td>
+<td>Meteor Streaks</td>
+<td>Simulates bright streaks from meteors passing through the frame.</td>
+<td>No</td>
+<td>Custom code, OpenCV</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

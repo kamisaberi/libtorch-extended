@@ -1,0 +1,5049 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://kamisaberi.github.io/xtorch/publications/extensive_list_of_deep_learning_papers_for_pytorch_on_papar_with_code_com_rewrite/">
+      
+      
+        <link rel="prev" href="../../installation/System%20Dependency%20Installer%20Script%20Documentation/">
+      
+      
+        <link rel="next" href="../extensive_list_of_deep_learning_papers_for_pytorch_rewrite/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Extensive List of Deep Learning Papers for PyTorch Rewrite - xTorch</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#extensive-list-of-deep-learning-papers-for-pytorch-rewrite" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="xTorch" class="md-header__button md-logo" aria-label="xTorch" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            xTorch
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Extensive List of Deep Learning Papers for PyTorch Rewrite
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/kamisaberi/xtorch" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="xTorch" class="md-nav__button md-logo" aria-label="xTorch" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    xTorch
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/kamisaberi/xtorch" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00_datasets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    00 datasets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_datasets_for_xtorch_library_not_in_pytorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Datasets for xtorch Library Not in PyTorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_datasets_for_xtorch_library_not_in_pytorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Additional Datasets for xtorch Library Not in PyTorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_machine_learning_datasets_for_%20xtorch_library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Machine Learning Datasets Similar to IRIS for xtorch Library
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_comprehensive_machine_learning_datasets_for_xtorch_library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comprehensive Machine Learning Datasets for xtorch Library
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_summary_of_machine_learning_datasets_for_xtorch_library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Summary of Machine Learning Datasets for xtorch Library
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contributing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../domain_specific_image_transforms_table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Domain specific image transforms table
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    License
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../list_of_albumentations_image_transforms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    List of albumentations image transforms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../list_of_opencV_image_transforms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    list of opencV image transforms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Api
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            Api
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/ref/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    REF
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_17_3" id="__nav_17_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cpp
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_17_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17_3">
+            <span class="md-nav__icon md-icon"></span>
+            Cpp
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/cpp/core_classes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    core_classes.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/cpp/native/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    native.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/cpp/tensor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    tensor.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_17_4" id="__nav_17_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_17_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17_4">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/python/core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    core.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/python/nn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    nn.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/python/optim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    optim.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/python/utils/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    utils.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Community
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/code_of_conduct/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    code_of_conduct.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    faq.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Developer
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19">
+            <span class="md-nav__icon md-icon"></span>
+            Developer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer/benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    benchmarks.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer/contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    contributing.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer/testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    testing.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20" >
+        
+          
+          <label class="md-nav__link" for="__nav_20" id="__nav_20_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ecosystem
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_20">
+            <span class="md-nav__icon md-icon"></span>
+            Ecosystem
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ecosystem/integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    integration.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ecosystem/nlp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    nlp.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ecosystem/vision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    vision.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_21" id="__nav_21_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/0_examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    0 examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/comprehensive_example_titles_for_xtorch_library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comprehensive Example Titles for xtorch Library
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/comprehensive_example_titles_for_xtorch_library_with_medical_and_biological_applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comprehensive Example Titles for xtorch Library with Medical and Biological Applications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_4" id="__nav_21_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Audio and speech
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_4">
+            <span class="md-nav__icon md-icon"></span>
+            Audio and speech
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/audio_and_speech/4_1_speech_recognition_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4 1 speech recognition examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/audio_and_speech/4_2_audio_classification_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4 2 audio classification examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_5" id="__nav_21_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Computer vision
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_5">
+            <span class="md-nav__icon md-icon"></span>
+            Computer vision
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/computer_vision/2_1_image_classification_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 1 image classification examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/computer_vision/2_2_object_detection_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 2 object detection examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/computer_vision/2_3_segmentation_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 3 segmentation examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/computer_vision/2_4_image_generation_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2 4 image generation examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_6" id="__nav_21_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Data handling and preprocessing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_6">
+            <span class="md-nav__icon md-icon"></span>
+            Data handling and preprocessing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/data_handling_and_preprocessing/10_1_datasets_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10 1 datasets examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/data_handling_and_preprocessing/10_2_data_loaders_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10 2 data loaders examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/data_handling_and_preprocessing/10_3_transforms_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    10 3 transforms examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_7" id="__nav_21_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Deployment and production
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_7">
+            <span class="md-nav__icon md-icon"></span>
+            Deployment and production
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/deployment_and_production/9_1_model_serialization_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    9 1 model serialization examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/deployment_and_production/9_2_inference_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    9 2 inference examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/deployment_and_production/9_3_web_services_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    9 3 web services examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_8" id="__nav_21_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Distributed and parallel training
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_8">
+            <span class="md-nav__icon md-icon"></span>
+            Distributed and parallel training
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/distributed_and_parallel_training/13_1_data_parallelism_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    13 1 data parallelism examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/distributed_and_parallel_training/13_2_model_parallelism_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    13 2 model parallelism examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/distributed_and_parallel_training/13_3_distributed_training_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    13 3 distributed training examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_9" id="__nav_21_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Generative models
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_9">
+            <span class="md-nav__icon md-icon"></span>
+            Generative models
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/generative_models/8_1_autoencoders_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    8 1 autoencoders examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/generative_models/8_2_gans_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    8 2 gans examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/generative_models/8_3_diffusion_models_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    8 3 diffusion models examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_10" id="__nav_21_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_10">
+            <span class="md-nav__icon md-icon"></span>
+            Getting started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/getting_started/1_getting_started_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1 getting started examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_11" id="__nav_21_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Graph neural networks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_11">
+            <span class="md-nav__icon md-icon"></span>
+            Graph neural networks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/graph_neural_networks/7_1_node_level_tasks_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7 1 node level tasks examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/graph_neural_networks/7_2_graph_level_tasks_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7 2 graph level tasks examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_12" id="__nav_21_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Natural language processing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_12">
+            <span class="md-nav__icon md-icon"></span>
+            Natural language processing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/natural_language_processing/3_1_text_classification_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3 1 text classification examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/natural_language_processing/3_2_sequence_to_sequence_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3 2 sequence to sequence examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/natural_language_processing/3_3_language_modeling_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3 3 language modeling examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_13" id="__nav_21_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Optimization and training techniques
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_13">
+            <span class="md-nav__icon md-icon"></span>
+            Optimization and training techniques
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/optimization_and_training_techniques/11_1_optimizers_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    11 1 optimizers examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/optimization_and_training_techniques/11_2_learning_rate_schedulers_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    11 2 learning rate schedulers examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/optimization_and_training_techniques/11_3_regularization_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    11 3 regularization examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_14" id="__nav_21_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Performance and benchmarking
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_14">
+            <span class="md-nav__icon md-icon"></span>
+            Performance and benchmarking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/performance_and_benchmarking/12_1_speed_optimization_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    12 1 speed optimization examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/performance_and_benchmarking/12_2_memory_management_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    12 2 memory management examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_15" id="__nav_21_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Reinforcement learning
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_15">
+            <span class="md-nav__icon md-icon"></span>
+            Reinforcement learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/reinforcement_learning/6_1_value_based_methods_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6 1 value based methods examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/reinforcement_learning/6_2_policy_based_methods_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6 2 policy based methods examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_16" id="__nav_21_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Time series and sequential data
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_16">
+            <span class="md-nav__icon md-icon"></span>
+            Time series and sequential data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/time_series_and_sequential_data/5_1_forecasting_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5 1 forecasting examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/time_series_and_sequential_data/5_2_anomaly_detection_examples_for_xtorch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5 2 anomaly detection examples for xtorch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_22" >
+        
+          
+          <label class="md-nav__link" for="__nav_22" id="__nav_22_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_22">
+            <span class="md-nav__icon md-icon"></span>
+            Getting started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    xTorch Installation Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/migration_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    migration_guide.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/quickstart_tutorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    quickstart_tutorial.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_23" >
+        
+          
+          <label class="md-nav__link" for="__nav_23" id="__nav_23_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_23">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/System%20Dependency%20Installer%20Script%20Documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Dependency Installer Script Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_24" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_24" id="__nav_24_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Publications
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_24_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_24">
+            <span class="md-nav__icon md-icon"></span>
+            Publications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Extensive List of Deep Learning Papers for PyTorch Rewrite
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Extensive List of Deep Learning Papers for PyTorch Rewrite
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Points
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-pytorch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why PyTorch?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methodology
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#categorized-paper-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Categorized Paper List
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Categorized Paper List">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#computer-vision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computer Vision
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#natural-language-processing-nlp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Natural Language Processing (NLP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reinforcement-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reinforcement Learning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generative-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generative Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-neural-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Neural Networks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recent-2024-papers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recent 2024 Papers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#potential-benefits-and-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Potential Benefits and Considerations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-gain-recognition" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Gain Recognition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extensive_list_of_deep_learning_papers_for_pytorch_rewrite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Extensive List of Deep Learning Papers for PyTorch Rewrite
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_25" >
+        
+          
+          <label class="md-nav__link" for="__nav_25" id="__nav_25_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Roadmaps
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_25_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_25">
+            <span class="md-nav__icon md-icon"></span>
+            Roadmaps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roadmaps/datasets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Transforms Roadmap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roadmaps/models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Datasets Roadmap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roadmaps/transforms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Transforms Roadmap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_26" >
+        
+          
+          <label class="md-nav__link" for="__nav_26" id="__nav_26_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tutorials
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_26_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_26">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_26_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_26_2" id="__nav_26_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Advanced
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_26_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_26_2">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/advanced/cpp_extensions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    cpp_extensions.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/advanced/jit_compilation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    jit_compilation.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_26_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_26_3" id="__nav_26_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Basics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_26_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_26_3">
+            <span class="md-nav__icon md-icon"></span>
+            Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/basics/custom_layers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    custom_layers.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/basics/hello_world/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hello World
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/basics/working_with_tensors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    working_with_tensors.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_26_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_26_4" id="__nav_26_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Intermediate
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_26_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_26_4">
+            <span class="md-nav__icon md-icon"></span>
+            Intermediate
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/intermediate/gpu_acceleration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    gpu_acceleration.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/intermediate/mixed_precision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    mixed_precision.md
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Points
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-pytorch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why PyTorch?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methodology
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#categorized-paper-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Categorized Paper List
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Categorized Paper List">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#computer-vision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computer Vision
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#natural-language-processing-nlp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Natural Language Processing (NLP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reinforcement-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reinforcement Learning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generative-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generative Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-neural-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Neural Networks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recent-2024-papers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recent 2024 Papers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#potential-benefits-and-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Potential Benefits and Considerations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-gain-recognition" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Gain Recognition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="extensive-list-of-deep-learning-papers-for-pytorch-rewrite">Extensive List of Deep Learning Papers for PyTorch Rewrite</h1>
+<h2 id="key-points">Key Points</h2>
+<ul>
+<li>Rewriting influential machine learning papers in PyTorch (assuming "xtroch" refers to PyTorch) could enhance performance and gain significant recognition, though success depends on implementation quality.</li>
+<li>The list includes highly cited and recent papers from <a href="https://paperswithcode.com/">Papers With Code</a>, covering domains like computer vision, NLP, reinforcement learning, generative models, graph neural networks, and 2024 papers.</li>
+<li>PyTorch’s dynamic computation graph, hardware optimization, and community libraries (e.g., TorchVision, Hugging Face) may improve performance for papers originally in TensorFlow, Caffe, or other frameworks.</li>
+<li>Recognition ("lots of credit") may come from providing optimized, well-documented PyTorch implementations, especially for papers with outdated or no PyTorch code.</li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<p>This document provides a comprehensive list of influential deep learning papers from <a href="https://paperswithcode.com/">Papers With Code</a> that you can rewrite in PyTorch to potentially improve your library’s performance and gain significant recognition. The papers are selected for their high impact, citation counts, and relevance to industrial applications, such as autonomous vehicles, healthcare, and recommendation systems. Rewriting these papers in PyTorch leverages its flexibility, hardware optimization, and community support to enhance model performance and attract attention from researchers and developers.</p>
+<p>The term “xtroch” is assumed to refer to PyTorch, as no standard framework matches “xtroch,” and PyTorch aligns with the context of improving performance. The papers are organized into six domains—computer vision, natural language processing, reinforcement learning, generative models, graph neural networks, and recent 2024 papers—to ensure broad coverage. Each entry includes the paper’s title, year, original framework (where known), a brief description, a link to the paper, and the potential benefit of rewriting in PyTorch. A summary table at the end consolidates all entries for quick reference.</p>
+<h2 id="why-pytorch">Why PyTorch?</h2>
+<p>PyTorch, developed by Meta AI, is a leading deep learning framework known for its dynamic computation graph, Pythonic interface, and robust support for GPUs and other accelerators. Rewriting influential papers in PyTorch offers several advantages:
+- <strong>Dynamic Computation Graph</strong>: Enables flexible model development and debugging, ideal for research and rapid prototyping.
+- <strong>Hardware Optimization</strong>: Supports modern GPUs, accelerating training and inference for real-time applications.
+- <strong>Community Libraries</strong>: Tools like TorchVision, Hugging Face Transformers, PyTorch Geometric, and Stable Baselines provide pre-trained models and optimized implementations.
+- <strong>Research Popularity</strong>: PyTorch’s dominance in the research community ensures access to the latest advancements, facilitating model extensions.</p>
+<p>By focusing on papers originally implemented in frameworks like TensorFlow, Caffe, Theano, or custom setups, or those with suboptimal PyTorch implementations, you can create high-quality implementations that enhance performance and gain recognition.</p>
+<h2 id="methodology">Methodology</h2>
+<p>The selection process involved identifying seminal and recent papers from <a href="https://paperswithcode.com/">Papers With Code</a>, prioritizing those with:
+- <strong>High Impact</strong>: High citation counts or foundational contributions to their fields.
+- <strong>Implementation Status</strong>: Preference for papers in non-PyTorch frameworks (e.g., TensorFlow, Caffe, Theano) or with outdated/suboptimal PyTorch implementations.
+- <strong>Industrial Relevance</strong>: Applicability to domains like autonomous vehicles, healthcare, recommendation systems, and data analysis.
+- <strong>Recognition Potential</strong>: Papers where a PyTorch implementation could attract attention due to their influence, lack of modern implementations, or emerging relevance (e.g., 2024 papers).</p>
+<p>The papers are categorized to cover diverse deep learning domains, ensuring a “big big big” list as requested. For each paper, the original framework, description, and rationale for rewriting in PyTorch are provided, considering PyTorch’s technical advantages and community ecosystem.</p>
+<h2 id="categorized-paper-list">Categorized Paper List</h2>
+<h3 id="computer-vision">Computer Vision</h3>
+<p>Computer vision papers are critical for industrial applications like quality control, surveillance, autonomous driving, and medical imaging. Many older papers were implemented in Caffe or TensorFlow, making them prime candidates for PyTorch modernization.</p>
+<ol>
+<li><strong>Deep Residual Learning for Image Recognition (2015)</strong>  </li>
+<li>Original Framework: Torch (Lua-based)  </li>
+<li>Description: Introduces ResNet, a deep CNN with residual connections, enabling training of very deep networks for image classification.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1512.03385">ResNet</a>  </li>
+<li>
+<p>Benefit: While PyTorch implementations exist in TorchVision, a custom, optimized implementation could improve performance and integration for industrial vision systems, such as quality control.</p>
+</li>
+<li>
+<p><strong>Very Deep Convolutional Networks for Large-Scale Image Recognition (2014)</strong>  </p>
+</li>
+<li>Original Framework: Caffe  </li>
+<li>Description: Presents VGG, a deep CNN with small filters, foundational for image classification tasks.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1409.1556">VGG</a>  </li>
+<li>
+<p>Benefit: PyTorch’s flexibility and TorchVision support can modernize VGG, improving training efficiency for applications like quality control.</p>
+</li>
+<li>
+<p><strong>You Only Look Once: Unified, Real-Time Object Detection (2016)</strong>  </p>
+</li>
+<li>Original Framework: Darknet  </li>
+<li>Description: Introduces YOLO, a single-pass object detection model for real-time applications.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1506.02640">YOLO</a>  </li>
+<li>
+<p>Benefit: PyTorch’s TorchVision simplifies integration and speeds up deployment for real-time industrial applications like surveillance.</p>
+</li>
+<li>
+<p><strong>Mask R-CNN (2017)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Extends Faster R-CNN for instance segmentation and object detection, excelling in tasks like defect detection.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1703.06870">Mask R-CNN</a>  </li>
+<li>
+<p>Benefit: PyTorch’s Detectron2 provides advanced tools for segmentation, enhancing performance for industrial vision systems.</p>
+</li>
+<li>
+<p><strong>Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks (2015)</strong>  </p>
+</li>
+<li>Original Framework: Caffe  </li>
+<li>Description: Introduces a two-stage object detection framework with region proposal networks.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1506.01497">Faster R-CNN</a>  </li>
+<li>
+<p>Benefit: PyTorch’s dynamic graph and TorchVision improve implementation and performance for real-time detection tasks.</p>
+</li>
+<li>
+<p><strong>SSD: Single Shot MultiBox Detector (2016)</strong>  </p>
+</li>
+<li>Original Framework: Caffe  </li>
+<li>Description: Proposes a single-shot object detection model for real-time applications.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1512.02325">SSD</a>  </li>
+<li>
+<p>Benefit: PyTorch’s optimization tools enhance speed and accuracy, benefiting real-time industrial systems.</p>
+</li>
+<li>
+<p><strong>MobileNetV2: Inverted Residuals and Linear Bottlenecks (2018)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Introduces a lightweight CNN for mobile and edge devices, suitable for industrial IoT.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1801.04381">MobileNetV2</a>  </li>
+<li>
+<p>Benefit: PyTorch’s mobile-friendly models and ease of deployment improve performance for edge devices in industrial settings.</p>
+</li>
+<li>
+<p><strong>EfficientDet: Scalable and Efficient Object Detection (2019)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Proposes a scalable and efficient object detection model with high accuracy.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1911.09070">EfficientDet</a>  </li>
+<li>
+<p>Benefit: PyTorch optimizes performance and scalability, supporting industrial vision applications.</p>
+</li>
+<li>
+<p><strong>U-Net: Convolutional Networks for Biomedical Image Segmentation (2015)</strong>  </p>
+</li>
+<li>Original Framework: Caffe  </li>
+<li>Description: Introduces U-Net, a CNN for precise biomedical image segmentation, widely used in medical imaging.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1505.04597">U-Net</a>  </li>
+<li>
+<p>Benefit: PyTorch’s modern optimizations enhance performance and ease of use compared to Caffe, supporting medical imaging applications.</p>
+</li>
+<li>
+<p><strong>DeepLab: Semantic Image Segmentation with Deep Convolutional Nets (2016)</strong>  </p>
+<ul>
+<li>Original Framework: Caffe  </li>
+<li>Description: Proposes DeepLab, a model for semantic image segmentation using atrous convolutions.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1606.00915">DeepLab</a>  </li>
+<li>Benefit: PyTorch’s TorchVision and dynamic graph improve segmentation performance for industrial vision tasks.</li>
+</ul>
+</li>
+<li>
+<p><strong>Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning (2016)</strong>  </p>
+<ul>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Combines Inception and ResNet architectures for improved image classification.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1602.07261">Inception-v4</a>  </li>
+<li>Benefit: PyTorch modernizes implementation, enhancing performance for industrial vision systems.</li>
+</ul>
+</li>
+<li>
+<p><strong>Squeeze-and-Excitation Networks (2017)</strong>  </p>
+<ul>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Introduces an attention mechanism to enhance CNN performance by modeling channel-wise relationships.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1709.01507">SE-Net</a>  </li>
+<li>Benefit: PyTorch simplifies integration with existing models, improving feature learning for vision tasks.</li>
+</ul>
+</li>
+<li>
+<p><strong>Non-local Neural Networks (2017)</strong>  </p>
+<ul>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Captures long-range dependencies in images and videos using non-local operations.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1711.07971">Non-local</a>  </li>
+<li>Benefit: PyTorch’s flexibility enhances implementation for video analysis in industrial settings.</li>
+</ul>
+</li>
+<li>
+<p><strong>Pyramid Scene Parsing Network (2017)</strong>  </p>
+<ul>
+<li>Original Framework: Caffe  </li>
+<li>Description: Introduces PSPNet for scene parsing and semantic segmentation using pyramid pooling.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1612.01105">PSPNet</a>  </li>
+<li>Benefit: PyTorch improves accuracy and training efficiency for segmentation tasks.</li>
+</ul>
+</li>
+<li>
+<p><strong>Feature Pyramid Networks for Object Detection (2017)</strong>  </p>
+<ul>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Enhances object detection across multiple scales using feature pyramids.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1612.03144">FPN</a>  </li>
+<li>Benefit: PyTorch optimizes performance for multi-scale detection in industrial vision systems.</li>
+</ul>
+</li>
+</ol>
+<h3 id="natural-language-processing-nlp">Natural Language Processing (NLP)</h3>
+<p>NLP papers power industrial applications like chatbots, sentiment analysis, and automated customer service in retail, finance, and tech. Many were originally implemented in TensorFlow or custom frameworks.</p>
+<ol>
+<li><strong>Attention Is All You Need (2017)</strong>  </li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Introduces the transformer architecture, relying on attention mechanisms for state-of-the-art NLP performance.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1706.03762">Transformer</a>  </li>
+<li>
+<p>Benefit: PyTorch’s dynamic graph and Hugging Face Transformers library optimize training and deployment for industrial NLP tasks like chatbots.</p>
+</li>
+<li>
+<p><strong>BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding (2018)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Presents BERT, a pre-trained bidirectional transformer excelling in tasks like question answering and sentiment analysis.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1810.04805">BERT</a>  </li>
+<li>
+<p>Benefit: PyTorch’s community-driven optimizations, as seen in Hugging Face, improve fine-tuning and integration for applications like sentiment analysis.</p>
+</li>
+<li>
+<p><strong>RoBERTa: A Robustly Optimized BERT Pretraining Approach (2019)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Enhances BERT with optimized pretraining strategies, achieving better performance on downstream tasks.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1907.11692">RoBERTa</a>  </li>
+<li>
+<p>Benefit: PyTorch’s hardware optimization boosts training speed and scalability, supporting industrial-scale NLP systems.</p>
+</li>
+<li>
+<p><strong>GPT-2: Language Models are Unsupervised Multitask Learners (2019)</strong>  </p>
+</li>
+<li>Original Framework: Custom (OpenAI)  </li>
+<li>Description: Introduces GPT-2, a large-scale generative language model for unsupervised multitask learning.  </li>
+<li>Link: <a href="https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf">GPT-2</a>  </li>
+<li>
+<p>Benefit: PyTorch’s support for large-scale language models and Hugging Face integration simplify fine-tuning for automated content generation.</p>
+</li>
+<li>
+<p><strong>ELMo: Deep Contextualized Word Representations (2018)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Proposes ELMo, a deep contextualized word representation model improving performance on various NLP tasks.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1802.05365">ELMo</a>  </li>
+<li>
+<p>Benefit: PyTorch’s flexibility and NLP libraries streamline implementation for tasks like named entity recognition.</p>
+</li>
+<li>
+<p><strong>XLNet: Generalized Autoregressive Pretraining for Language Understanding (2019)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Introduces XLNet, a generalized autoregressive pretraining method outperforming BERT on several NLP benchmarks.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1906.08237">XLNet</a>  </li>
+<li>
+<p>Benefit: PyTorch’s dynamic graph enhances training efficiency for advanced NLP applications like document summarization.</p>
+</li>
+<li>
+<p><strong>T5: Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer (2019)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Proposes T5, a unified text-to-text transformer for multiple NLP tasks.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1910.10683">T5</a>  </li>
+<li>
+<p>Benefit: PyTorch improves flexibility for transfer learning in industrial NLP systems.</p>
+</li>
+<li>
+<p><strong>BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation (2020)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Introduces BART, a pre-training approach for generation and comprehension tasks.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1910.13461">BART</a>  </li>
+<li>
+<p>Benefit: PyTorch optimizes performance for sequence-to-sequence tasks like text summarization.</p>
+</li>
+<li>
+<p><strong>DistilBERT: A Distilled Version of BERT (2019)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Presents DistilBERT, a smaller, faster BERT variant with comparable performance.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1910.01108">DistilBERT</a>  </li>
+<li>
+<p>Benefit: PyTorch enhances deployment on resource-constrained devices for industrial applications.</p>
+</li>
+<li>
+<p><strong>ALBERT: A Lite BERT for Self-supervised Learning of Language Representations (2020)</strong>  </p>
+<ul>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Introduces ALBERT, a lightweight BERT with parameter sharing for efficiency.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1909.11942">ALBERT</a>  </li>
+<li>Benefit: PyTorch improves efficiency for large-scale NLP systems in resource-limited environments.</li>
+</ul>
+</li>
+<li>
+<p><strong>ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators (2020)</strong>  </p>
+<ul>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Proposes ELECTRA, a discriminator-based pretraining approach for efficient NLP.  </li>
+<li>Link: <a href="https://arxiv.org/abs/2003.10555">ELECTRA</a>  </li>
+<li>Benefit: PyTorch enhances training speed and scalability for industrial NLP tasks.</li>
+</ul>
+</li>
+<li>
+<p><strong>DeBERTa: Decoding-enhanced BERT with Disentangled Attention (2020)</strong>  </p>
+<ul>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Improves BERT with disentangled attention and enhanced decoding mechanisms.  </li>
+<li>Link: <a href="https://arxiv.org/abs/2006.03654">DeBERTa</a>  </li>
+<li>Benefit: PyTorch boosts performance for complex NLP tasks like question answering.</li>
+</ul>
+</li>
+<li>
+<p><strong>Longformer: The Long-Document Transformer (2020)</strong>  </p>
+<ul>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Introduces Longformer, an efficient transformer for long-document processing.  </li>
+<li>Link: <a href="https://arxiv.org/abs/2004.05150">Longformer</a>  </li>
+<li>Benefit: PyTorch optimizes scalability for document processing in industrial settings.</li>
+</ul>
+</li>
+<li>
+<p><strong>BigBird: Transformers for Longer Sequences (2020)</strong>  </p>
+<ul>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Proposes BigBird, a sparse attention transformer for long sequences.  </li>
+<li>Link: <a href="https://arxiv.org/abs/2007.14062">BigBird</a>  </li>
+<li>Benefit: PyTorch enhances performance for long-sequence NLP tasks like summarization.</li>
+</ul>
+</li>
+</ol>
+<h3 id="reinforcement-learning">Reinforcement Learning</h3>
+<p>Reinforcement learning (RL) papers are vital for industrial applications like process optimization, robotics, and autonomous systems, often implemented in TensorFlow or Torch.</p>
+<ol>
+<li><strong>Proximal Policy Optimization Algorithms (2017)</strong>  </li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Introduces PPO, a stable and efficient RL algorithm for policy optimization.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1707.06347">PPO</a>  </li>
+<li>
+<p>Benefit: PyTorch’s Stable Baselines optimize performance for industrial RL applications like robotic control.</p>
+</li>
+<li>
+<p><strong>Deep Deterministic Policy Gradients (2015)</strong>  </p>
+</li>
+<li>Original Framework: Torch (Lua)  </li>
+<li>Description: Proposes DDPG, an RL algorithm for continuous action spaces, suitable for robotics.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1509.02971">DDPG</a>  </li>
+<li>
+<p>Benefit: PyTorch, as Torch’s successor, offers modern optimizations for robotic and automation tasks.</p>
+</li>
+<li>
+<p><strong>Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning (2018)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Introduces SAC, an off-policy RL algorithm with maximum entropy for robust tasks.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1801.01290">SAC</a>  </li>
+<li>
+<p>Benefit: PyTorch’s dynamic graph and Stable Baselines enhance training efficiency for industrial automation.</p>
+</li>
+<li>
+<p><strong>Deep Q-Networks (2013)</strong>  </p>
+</li>
+<li>Original Framework: Torch (Lua)  </li>
+<li>Description: Introduces DQN, a foundational RL algorithm for discrete action spaces.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1312.5602">DQN</a>  </li>
+<li>
+<p>Benefit: PyTorch modernizes implementation for process optimization in industrial settings.</p>
+</li>
+<li>
+<p><strong>Trust Region Policy Optimization (2015)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Proposes TRPO, a stable policy optimization algorithm for RL tasks.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1502.05477">TRPO</a>  </li>
+<li>
+<p>Benefit: PyTorch enhances performance for industrial control systems like manufacturing optimization.</p>
+</li>
+<li>
+<p><strong>Asynchronous Methods for Deep Reinforcement Learning (2016)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Introduces A3C, a parallel RL training method for improved efficiency.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1602.01783">A3C</a>  </li>
+<li>
+<p>Benefit: PyTorch improves scalability for distributed RL training in industrial applications.</p>
+</li>
+<li>
+<p><strong>Advantage Actor-Critic Algorithms (2016)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Proposes A2C, an efficient actor-critic RL method for policy optimization.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1602.01783">A2C</a>  </li>
+<li>
+<p>Benefit: PyTorch’s flexibility enhances implementation for industrial RL tasks.</p>
+</li>
+<li>
+<p><strong>Rainbow: Combining Improvements in Deep Reinforcement Learning (2017)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Combines multiple DQN improvements for enhanced RL performance.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1710.02298">Rainbow</a>  </li>
+<li>
+<p>Benefit: PyTorch optimizes performance for complex RL tasks in automation.</p>
+</li>
+<li>
+<p><strong>Actor-Critic with Experience Replay (2016)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Introduces ACER, an RL method improving stability with experience replay.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1611.01224">ACER</a>  </li>
+<li>
+<p>Benefit: PyTorch enhances efficiency for industrial RL applications.</p>
+</li>
+<li>
+<p><strong>Distributed Distributional Deterministic Policy Gradients (2018)</strong>  </p>
+<ul>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Proposes D4PG, a distributional RL algorithm for continuous actions.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1804.08617">D4PG</a>  </li>
+<li>Benefit: PyTorch improves implementation for robotic control and automation.</li>
+</ul>
+</li>
+</ol>
+<h3 id="generative-models">Generative Models</h3>
+<p>Generative models are used in industrial applications like synthetic data generation, design automation, and anomaly detection, often implemented in Theano or TensorFlow.</p>
+<ol>
+<li><strong>Generative Adversarial Nets (2014)</strong>  </li>
+<li>Original Framework: Theano  </li>
+<li>Description: Introduces GANs, a framework for generative modeling using adversarial training.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1406.2661">GANs</a>  </li>
+<li>
+<p>Benefit: PyTorch’s extensive GAN support through PyTorch Lightning improves training efficiency for synthetic data generation.</p>
+</li>
+<li>
+<p><strong>Auto-Encoding Variational Bayes (2013)</strong>  </p>
+</li>
+<li>Original Framework: Theano  </li>
+<li>Description: Proposes VAEs, a generative model for learning latent representations, suitable for anomaly detection.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1312.6114">VAEs</a>  </li>
+<li>
+<p>Benefit: PyTorch’s dynamic graph and automatic differentiation simplify VAE implementation for industrial applications.</p>
+</li>
+<li>
+<p><strong>CycleGAN: Unpaired Image-to-Image Translation (2017)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Introduces CycleGAN for unpaired image-to-image translation, useful for style transfer in design.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1703.10593">CycleGAN</a>  </li>
+<li>
+<p>Benefit: PyTorch’s flexibility enhances training and experimentation for industrial design automation.</p>
+</li>
+<li>
+<p><strong>StyleGAN: A Style-Based Generator Architecture for Generative Adversarial Networks (2018)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Proposes StyleGAN, a high-quality image generation model for creative applications.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1812.04948">StyleGAN</a>  </li>
+<li>
+<p>Benefit: PyTorch improves performance for high-fidelity image synthesis in industrial settings.</p>
+</li>
+<li>
+<p><strong>WGAN: Wasserstein Generative Adversarial Networks (2017)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Improves GAN training stability using Wasserstein distance.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1701.07875">WGAN</a>  </li>
+<li>
+<p>Benefit: PyTorch optimizes performance for stable generative tasks like data augmentation.</p>
+</li>
+<li>
+<p><strong>WGAN-GP: Improved Training of Wasserstein GANs (2017)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Enhances WGAN with gradient penalty for improved stability.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1704.00028">WGAN-GP</a>  </li>
+<li>
+<p>Benefit: PyTorch improves training efficiency for generative models in industrial applications.</p>
+</li>
+<li>
+<p><strong>Progressive Growing of GANs for Improved Quality, Stability, and Variation (2017)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Introduces progressive GANs for stable high-resolution image generation.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1710.10196">Progressive GANs</a>  </li>
+<li>
+<p>Benefit: PyTorch enhances scalability for high-resolution generative tasks.</p>
+</li>
+<li>
+<p><strong>BigGAN: Large Scale GAN Training for High Fidelity Natural Image Synthesis (2018)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Proposes BigGAN for high-fidelity image synthesis using large-scale GAN training.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1809.11096">BigGAN</a>  </li>
+<li>
+<p>Benefit: PyTorch improves performance for large-scale generative applications.</p>
+</li>
+<li>
+<p><strong>VQ-VAE: Neural Discrete Representation Learning (2017)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Introduces VQ-VAE, a model for learning discrete latent representations.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1711.00937">VQ-VAE</a>  </li>
+<li>
+<p>Benefit: PyTorch simplifies implementation for generative tasks in industrial settings.</p>
+</li>
+<li>
+<p><strong>DCGAN: Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks (2015)</strong>  </p>
+<ul>
+<li>Original Framework: Theano  </li>
+<li>Description: Proposes DCGAN, a convolutional GAN architecture for high-quality image generation.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1511.06434">DCGAN</a>  </li>
+<li>Benefit: PyTorch’s convolutional support and GAN libraries improve training stability and performance.</li>
+</ul>
+</li>
+</ol>
+<h3 id="graph-neural-networks">Graph Neural Networks</h3>
+<p>Graph neural networks (GNNs) are used in industrial applications like network analysis, recommendation systems, and molecular design, often implemented in TensorFlow.</p>
+<ol>
+<li><strong>Graph Convolutional Networks (2016)</strong>  </li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Introduces GCNs, a framework for learning on graph-structured data, excelling in node classification.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1609.02907">GCN</a>  </li>
+<li>
+<p>Benefit: PyTorch Geometric provides specialized tools for GNNs, improving performance for network analysis.</p>
+</li>
+<li>
+<p><strong>Graph Attention Networks (2017)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Proposes GATs, which use attention mechanisms to improve GNN performance on graph tasks.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1710.10903">GAT</a>  </li>
+<li>
+<p>Benefit: PyTorch Geometric’s attention support enhances model development for recommendation systems.</p>
+</li>
+<li>
+<p><strong>GraphSAGE: Inductive Representation Learning on Large Graphs (2017)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Introduces GraphSAGE, an inductive framework for learning node embeddings on large graphs.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1706.02216">GraphSAGE</a>  </li>
+<li>
+<p>Benefit: PyTorch Geometric improves scalability for large-scale industrial graph applications.</p>
+</li>
+<li>
+<p><strong>Graph Isomorphism Network (2018)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Proposes GIN, a powerful GNN for graph isomorphism tasks, suitable for molecular design.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1810.00826">GIN</a>  </li>
+<li>
+<p>Benefit: PyTorch Geometric improves performance for chemical engineering applications.</p>
+</li>
+<li>
+<p><strong>Neural Graph Fingerprints (2016)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Introduces GNNs for molecular tasks, predicting chemical properties.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1603.08774">NGF</a>  </li>
+<li>
+<p>Benefit: PyTorch Geometric enhances implementation for molecular design in industrial settings.</p>
+</li>
+<li>
+<p><strong>Graph Neural Networks with Convolutional ARMA Filters (2019)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Proposes ARMA-based GNNs for improved graph processing.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1901.01343">ARMA-GNN</a>  </li>
+<li>
+<p>Benefit: PyTorch Geometric enhances flexibility for graph-based industrial applications.</p>
+</li>
+<li>
+<p><strong>Diffusion Convolutional Recurrent Neural Network (2018)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Introduces DCRNN for traffic forecasting using GNNs.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1707.01926">DCRNN</a>  </li>
+<li>
+<p>Benefit: PyTorch Geometric improves performance for transportation and logistics applications.</p>
+</li>
+<li>
+<p><strong>Gated Graph Sequence Neural Networks (2016)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Proposes gated GNNs for sequential graph processing.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1511.05493">Gated GNN</a>  </li>
+<li>
+<p>Benefit: PyTorch Geometric improves efficiency for sequential graph tasks.</p>
+</li>
+<li>
+<p><strong>Message Passing Neural Networks for Quantum Chemistry (2017)</strong>  </p>
+</li>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Introduces MPNNs for molecular property prediction.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1704.01212">MPNN</a>  </li>
+<li>
+<p>Benefit: PyTorch Geometric enhances scalability for chemical engineering applications.</p>
+</li>
+<li>
+<p><strong>Directed Graph Convolutional Networks (2017)</strong>  </p>
+<ul>
+<li>Original Framework: TensorFlow  </li>
+<li>Description: Proposes GNNs for directed graphs, improving network analysis.  </li>
+<li>Link: <a href="https://arxiv.org/abs/1704.08415">DGCN</a>  </li>
+<li>Benefit: PyTorch Geometric improves implementation for directed graph tasks in industrial settings.</li>
+</ul>
+</li>
+</ol>
+<h3 id="recent-2024-papers">Recent 2024 Papers</h3>
+<p>Recent papers from 2024 are valuable due to their novelty and potential lack of widespread PyTorch implementations, offering opportunities for early adoption and recognition.</p>
+<ol>
+<li><strong>Vision Transformers Need Registers (2023)</strong>  </li>
+<li>Original Framework: Not specified (likely TensorFlow or PyTorch)  </li>
+<li>Description: Improves vision transformers by adding register tokens to fix feature map artifacts in dense prediction tasks.  </li>
+<li>Link: <a href="https://arxiv.org/abs/2309.16588">Vision Transformers</a>  </li>
+<li>
+<p>Benefit: An optimized PyTorch implementation could enhance performance for dense visual prediction tasks in industrial vision systems.</p>
+</li>
+<li>
+<p><strong>HyperFast: A Hypernetwork for Fast Tabular Classification (2024)</strong>  </p>
+</li>
+<li>Original Framework: Not specified (likely TensorFlow or custom)  </li>
+<li>Description: Introduces HyperFast, a hypernetwork for instant tabular data classification, suitable for industrial data analysis.  </li>
+<li>Link: Not directly available; search arXiv for “HyperFast”  </li>
+<li>
+<p>Benefit: A PyTorch implementation could make this model accessible for industrial applications like financial forecasting.</p>
+</li>
+<li>
+<p><strong>Grafting Vision Transformers (2024)</strong>  </p>
+</li>
+<li>Original Framework: Not specified (likely TensorFlow or PyTorch)  </li>
+<li>Description: Presents GrafT, an add-on component for vision transformers to handle global dependencies.  </li>
+<li>Link: <a href="https://openaccess.thecvf.com/content/WACV2024/html/Park_Grafting_Vision_Transformers_WACV_2024_paper.html">Grafting ViTs</a>  </li>
+<li>
+<p>Benefit: PyTorch improves integration with existing vision transformer frameworks for industrial vision tasks.</p>
+</li>
+<li>
+<p><strong>Controllable Generation with Text-to-Image Diffusion Models: A Survey (2024)</strong>  </p>
+</li>
+<li>Original Framework: Not applicable (survey paper)  </li>
+<li>Description: Surveys controllable text-to-image generation techniques using diffusion models.  </li>
+<li>Link: <a href="https://arxiv.org/abs/2403.04279">Text-to-Image Survey</a>  </li>
+<li>
+<p>Benefit: Implementing surveyed methods in PyTorch provides a foundation for generative AI research in industrial design.</p>
+</li>
+<li>
+<p><strong>DAPO: Data-Augmented Pre-training of Transformers for Math (2024)</strong>  </p>
+</li>
+<li>Original Framework: Not specified (likely TensorFlow or custom)  </li>
+<li>Description: Achieves state-of-the-art performance on math problem solving with data augmentation.  </li>
+<li>Link: Not directly available; search arXiv for “DAPO”  </li>
+<li>Benefit: A PyTorch implementation enables broader adoption in educational and research contexts for industrial applications.</li>
+</ol>
+<h2 id="potential-benefits-and-considerations">Potential Benefits and Considerations</h2>
+<p>Rewriting these papers in PyTorch could yield significant benefits:
+- <strong>Performance Improvements</strong>: PyTorch’s dynamic graph and hardware optimization can reduce training and inference times, critical for real-time applications like autonomous vehicles and speech recognition.
+- <strong>Ease of Development</strong>: PyTorch’s Pythonic interface and community libraries (e.g., TorchVision, Hugging Face) simplify model development and experimentation.
+- <strong>Community Recognition</strong>: High-quality, well-documented implementations shared on platforms like GitHub or Hugging Face can attract attention from researchers and developers, especially for influential or novel papers.
+- <strong>Industrial Relevance</strong>: The selected papers align with industrial needs, such as quality control (computer vision), customer service automation (NLP), and process optimization (RL).</p>
+<p>However, consider the following:
+- <strong>Existing Implementations</strong>: Some papers (e.g., BERT, ResNet) already have PyTorch implementations. Your rewrite should offer unique optimizations or features to stand out.
+- <strong>Benchmarking</strong>: Performance improvements depend on your library’s requirements and hardware. Benchmark original and PyTorch implementations to quantify benefits.
+- <strong>Documentation and Sharing</strong>: To gain “lots of credit,” ensure implementations are well-documented and shared on accessible platforms, with clear instructions for use.
+- <strong>Domain Prioritization</strong>: Focus on domains where your library has strengths or where community interest is high (e.g., vision, NLP).</p>
+<h2 id="how-to-gain-recognition">How to Gain Recognition</h2>
+<p>To maximize recognition (“lots of credit”):
+1. <strong>Select High-Impact Papers</strong>: Prioritize papers with high citation counts (e.g., ResNet, BERT) or recent 2024 papers with emerging relevance (e.g., HyperFast, DAPO).
+2. <strong>Optimize Implementations</strong>: Create efficient, scalable PyTorch implementations leveraging libraries like TorchVision, Hugging Face, or PyTorch Geometric.
+3. <strong>Document Thoroughly</strong>: Provide clear documentation, including setup instructions, usage examples, and performance benchmarks.
+4. <strong>Share Widely</strong>: Publish implementations on GitHub, Hugging Face, or other platforms, and promote them via research communities, conferences, or social media (e.g., X posts).
+5. <strong>Engage the Community</strong>: Respond to user feedback, contribute to open-source projects, and collaborate with researchers to increase visibility.</p>
+<h2 id="summary-table">Summary Table</h2>
+<p>The following table summarizes all papers, including their category, title, year, original framework, link, and potential benefit of rewriting in PyTorch.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Category</strong></th>
+<th><strong>Paper Title</strong></th>
+<th><strong>Year</strong></th>
+<th><strong>Original Framework</strong></th>
+<th><strong>Link</strong></th>
+<th><strong>Potential Benefit in PyTorch</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Computer Vision</td>
+<td>Deep Residual Learning for Image Recognition</td>
+<td>2015</td>
+<td>Torch (Lua)</td>
+<td><a href="https://arxiv.org/abs/1512.03385">ResNet</a></td>
+<td>Optimizes performance with TorchVision for industrial vision systems.</td>
+</tr>
+<tr>
+<td>Computer Vision</td>
+<td>Very Deep Convolutional Networks for Large-Scale Image Recognition</td>
+<td>2014</td>
+<td>Caffe</td>
+<td><a href="https://arxiv.org/abs/1409.1556">VGG</a></td>
+<td>Modernizes implementation for quality control applications.</td>
+</tr>
+<tr>
+<td>Computer Vision</td>
+<td>You Only Look Once: Unified, Real-Time Object Detection</td>
+<td>2016</td>
+<td>Darknet</td>
+<td><a href="https://arxiv.org/abs/1506.02640">YOLO</a></td>
+<td>Streamlines deployment for real-time surveillance systems.</td>
+</tr>
+<tr>
+<td>Computer Vision</td>
+<td>Mask R-CNN</td>
+<td>2017</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1703.06870">Mask R-CNN</a></td>
+<td>Enhances segmentation with Detectron2 for defect detection.</td>
+</tr>
+<tr>
+<td>Computer Vision</td>
+<td>Faster R-CNN: Towards Real-Time Object Detection</td>
+<td>2015</td>
+<td>Caffe</td>
+<td><a href="https://arxiv.org/abs/1506.01497">Faster R-CNN</a></td>
+<td>Improves implementation for real-time detection tasks.</td>
+</tr>
+<tr>
+<td>Computer Vision</td>
+<td>SSD: Single Shot MultiBox Detector</td>
+<td>2016</td>
+<td>Caffe</td>
+<td><a href="https://arxiv.org/abs/1512.02325">SSD</a></td>
+<td>Enhances speed and accuracy for real-time industrial systems.</td>
+</tr>
+<tr>
+<td>Computer Vision</td>
+<td>MobileNetV2: Inverted Residuals and Linear Bottlenecks</td>
+<td>2018</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1801.04381">MobileNetV2</a></td>
+<td>Improves deployment for edge devices in industrial IoT.</td>
+</tr>
+<tr>
+<td>Computer Vision</td>
+<td>EfficientDet: Scalable and Efficient Object Detection</td>
+<td>2019</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1911.09070">EfficientDet</a></td>
+<td>Optimizes performance for scalable vision systems.</td>
+</tr>
+<tr>
+<td>Computer Vision</td>
+<td>U-Net: Convolutional Networks for Biomedical Image Segmentation</td>
+<td>2015</td>
+<td>Caffe</td>
+<td><a href="https://arxiv.org/abs/1505.04597">U-Net</a></td>
+<td>Enhances segmentation accuracy for healthcare applications.</td>
+</tr>
+<tr>
+<td>Computer Vision</td>
+<td>DeepLab: Semantic Image Segmentation with Deep Convolutional Nets</td>
+<td>2016</td>
+<td>Caffe</td>
+<td><a href="https://arxiv.org/abs/1606.00915">DeepLab</a></td>
+<td>Improves segmentation performance with TorchVision.</td>
+</tr>
+<tr>
+<td>Computer Vision</td>
+<td>Inception-v4, Inception-ResNet and the Impact of Residual Connections</td>
+<td>2016</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1602.07261">Inception-v4</a></td>
+<td>Modernizes implementation for industrial vision systems.</td>
+</tr>
+<tr>
+<td>Computer Vision</td>
+<td>Squeeze-and-Excitation Networks</td>
+<td>2017</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1709.01507">SE-Net</a></td>
+<td>Simplifies integration for enhanced feature learning.</td>
+</tr>
+<tr>
+<td>Computer Vision</td>
+<td>Non-local Neural Networks</td>
+<td>2017</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1711.07971">Non-local</a></td>
+<td>Enhances implementation for video analysis in industrial settings.</td>
+</tr>
+<tr>
+<td>Computer Vision</td>
+<td>Pyramid Scene Parsing Network</td>
+<td>2017</td>
+<td>Caffe</td>
+<td><a href="https://arxiv.org/abs/1612.01105">PSPNet</a></td>
+<td>Improves accuracy for segmentation tasks.</td>
+</tr>
+<tr>
+<td>Computer Vision</td>
+<td>Feature Pyramid Networks for Object Detection</td>
+<td>2017</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1612.03144">FPN</a></td>
+<td>Optimizes performance for multi-scale detection.</td>
+</tr>
+<tr>
+<td>NLP</td>
+<td>Attention Is All You Need</td>
+<td>2017</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1706.03762">Transformer</a></td>
+<td>Enhances transformer performance with Hugging Face libraries.</td>
+</tr>
+<tr>
+<td>NLP</td>
+<td>BERT: Pre-training of Deep Bidirectional Transformers</td>
+<td>2018</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1810.04805">BERT</a></td>
+<td>Optimizes fine-tuning for customer service systems.</td>
+</tr>
+<tr>
+<td>NLP</td>
+<td>RoBERTa: A Robustly Optimized BERT Pretraining Approach</td>
+<td>2019</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1907.11692">RoBERTa</a></td>
+<td>Boosts training speed for large-scale NLP systems.</td>
+</tr>
+<tr>
+<td>NLP</td>
+<td>GPT-2: Language Models are Unsupervised Multitask Learners</td>
+<td>2019</td>
+<td>Custom (OpenAI)</td>
+<td><a href="https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf">GPT-2</a></td>
+<td>Simplifies fine-tuning for automated content generation.</td>
+</tr>
+<tr>
+<td>NLP</td>
+<td>ELMo: Deep Contextualized Word Representations</td>
+<td>2018</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1802.05365">ELMo</a></td>
+<td>Streamlines implementation for named entity recognition.</td>
+</tr>
+<tr>
+<td>NLP</td>
+<td>XLNet: Generalized Autoregressive Pretraining</td>
+<td>2019</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1906.08237">XLNet</a></td>
+<td>Enhances training efficiency for advanced NLP tasks.</td>
+</tr>
+<tr>
+<td>NLP</td>
+<td>T5: Exploring the Limits of Transfer Learning</td>
+<td>2019</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1910.10683">T5</a></td>
+<td>Improves flexibility for transfer learning applications.</td>
+</tr>
+<tr>
+<td>NLP</td>
+<td>BART: Denoising Sequence-to-Sequence Pre-training</td>
+<td>2020</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1910.13461">BART</a></td>
+<td>Optimizes performance for sequence-to-sequence tasks.</td>
+</tr>
+<tr>
+<td>NLP</td>
+<td>DistilBERT: A Distilled Version of BERT</td>
+<td>2019</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1910.01108">DistilBERT</a></td>
+<td>Enhances deployment on resource-constrained devices.</td>
+</tr>
+<tr>
+<td>NLP</td>
+<td>ALBERT: A Lite BERT for Self-supervised Learning</td>
+<td>2020</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1909.11942">ALBERT</a></td>
+<td>Improves efficiency for large-scale NLP systems.</td>
+</tr>
+<tr>
+<td>NLP</td>
+<td>ELECTRA: Pre-training Text Encoders as Discriminators</td>
+<td>2020</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/2003.10555">ELECTRA</a></td>
+<td>Enhances training speed for industrial NLP tasks.</td>
+</tr>
+<tr>
+<td>NLP</td>
+<td>DeBERTa: Decoding-enhanced BERT with Disentangled Attention</td>
+<td>2020</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/2006.03654">DeBERTa</a></td>
+<td>Boosts performance for complex NLP tasks.</td>
+</tr>
+<tr>
+<td>NLP</td>
+<td>Longformer: The Long-Document Transformer</td>
+<td>2020</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/2004.05150">Longformer</a></td>
+<td>Optimizes scalability for document processing.</td>
+</tr>
+<tr>
+<td>NLP</td>
+<td>BigBird: Transformers for Longer Sequences</td>
+<td>2020</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/2007.14062">BigBird</a></td>
+<td>Enhances performance for long-sequence NLP tasks.</td>
+</tr>
+<tr>
+<td>Reinforcement Learning</td>
+<td>Proximal Policy Optimization Algorithms</td>
+<td>2017</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1707.06347">PPO</a></td>
+<td>Optimizes performance with Stable Baselines for industrial RL.</td>
+</tr>
+<tr>
+<td>Reinforcement Learning</td>
+<td>Deep Deterministic Policy Gradients</td>
+<td>2015</td>
+<td>Torch (Lua)</td>
+<td><a href="https://arxiv.org/abs/1509.02971">DDPG</a></td>
+<td>Modernizes implementation for robotic control.</td>
+</tr>
+<tr>
+<td>Reinforcement Learning</td>
+<td>Soft Actor-Critic: Off-Policy Maximum Entropy</td>
+<td>2018</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1801.01290">SAC</a></td>
+<td>Enhances training efficiency for industrial automation.</td>
+</tr>
+<tr>
+<td>Reinforcement Learning</td>
+<td>Deep Q-Networks</td>
+<td>2013</td>
+<td>Torch (Lua)</td>
+<td><a href="https://arxiv.org/abs/1312.5602">DQN</a></td>
+<td>Modernizes implementation for process optimization.</td>
+</tr>
+<tr>
+<td>Reinforcement Learning</td>
+<td>Trust Region Policy Optimization</td>
+<td>2015</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1502.05477">TRPO</a></td>
+<td>Enhances performance for industrial control systems.</td>
+</tr>
+<tr>
+<td>Reinforcement Learning</td>
+<td>Asynchronous Methods for Deep Reinforcement Learning</td>
+<td>2016</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1602.01783">A3C</a></td>
+<td>Improves scalability for distributed RL training.</td>
+</tr>
+<tr>
+<td>Reinforcement Learning</td>
+<td>Advantage Actor-Critic Algorithms</td>
+<td>2016</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1602.01783">A2C</a></td>
+<td>Enhances implementation for industrial RL tasks.</td>
+</tr>
+<tr>
+<td>Reinforcement Learning</td>
+<td>Rainbow: Combining Improvements in Deep RL</td>
+<td>2017</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1710.02298">Rainbow</a></td>
+<td>Optimizes performance for complex RL tasks.</td>
+</tr>
+<tr>
+<td>Reinforcement Learning</td>
+<td>Actor-Critic with Experience Replay</td>
+<td>2016</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1611.01224">ACER</a></td>
+<td>Enhances efficiency for industrial RL applications.</td>
+</tr>
+<tr>
+<td>Reinforcement Learning</td>
+<td>Distributed Distributional Deterministic Policy Gradients</td>
+<td>2018</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1804.08617">D4PG</a></td>
+<td>Improves implementation for robotic control.</td>
+</tr>
+<tr>
+<td>Generative Models</td>
+<td>Generative Adversarial Nets</td>
+<td>2014</td>
+<td>Theano</td>
+<td><a href="https://arxiv.org/abs/1406.2661">GANs</a></td>
+<td>Improves training efficiency with PyTorch Lightning.</td>
+</tr>
+<tr>
+<td>Generative Models</td>
+<td>Auto-Encoding Variational Bayes</td>
+<td>2013</td>
+<td>Theano</td>
+<td><a href="https://arxiv.org/abs/1312.6114">VAEs</a></td>
+<td>Simplifies implementation for anomaly detection.</td>
+</tr>
+<tr>
+<td>Generative Models</td>
+<td>CycleGAN: Unpaired Image-to-Image Translation</td>
+<td>2017</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1703.10593">CycleGAN</a></td>
+<td>Enhances flexibility for industrial design automation.</td>
+</tr>
+<tr>
+<td>Generative Models</td>
+<td>StyleGAN: A Style-Based Generator Architecture</td>
+<td>2018</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1812.04948">StyleGAN</a></td>
+<td>Improves performance for high-fidelity image synthesis.</td>
+</tr>
+<tr>
+<td>Generative Models</td>
+<td>WGAN: Wasserstein Generative Adversarial Networks</td>
+<td>2017</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1701.07875">WGAN</a></td>
+<td>Optimizes performance for stable generative tasks.</td>
+</tr>
+<tr>
+<td>Generative Models</td>
+<td>WGAN-GP: Improved Training of Wasserstein GANs</td>
+<td>2017</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1704.00028">WGAN-GP</a></td>
+<td>Improves training efficiency for generative models.</td>
+</tr>
+<tr>
+<td>Generative Models</td>
+<td>Progressive Growing of GANs</td>
+<td>2017</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1710.10196">Progressive GANs</a></td>
+<td>Enhances scalability for high-resolution generative tasks.</td>
+</tr>
+<tr>
+<td>Generative Models</td>
+<td>BigGAN: Large Scale GAN Training</td>
+<td>2018</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1809.11096">BigGAN</a> sosyal medya paylaşımı</td>
+<td>Improves performance for large-scale generative applications.</td>
+</tr>
+<tr>
+<td>Generative Models</td>
+<td>VQ-VAE: Neural Discrete Representation Learning</td>
+<td>2017</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1711.00937">VQ-VAE</a></td>
+<td>Simplifies implementation for generative tasks.</td>
+</tr>
+<tr>
+<td>Generative Models</td>
+<td>DCGAN: Deep Convolutional Generative Adversarial Networks</td>
+<td>2015</td>
+<td>Theano</td>
+<td><a href="https://arxiv.org/abs/1511.06434">DCGAN</a></td>
+<td>Improves training stability for image synthesis.</td>
+</tr>
+<tr>
+<td>Graph Neural Networks</td>
+<td>Graph Convolutional Networks</td>
+<td>2016</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1609.02907">GCN</a></td>
+<td>Enhances performance with PyTorch Geometric for network analysis.</td>
+</tr>
+<tr>
+<td>Graph Neural Networks</td>
+<td>Graph Attention Networks</td>
+<td>2017</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1710.10903">GAT</a></td>
+<td>Improves flexibility with PyTorch Geometric for recommendation systems.</td>
+</tr>
+<tr>
+<td>Graph Neural Networks</td>
+<td>GraphSAGE: Inductive Representation Learning</td>
+<td>2017</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1706.02216">GraphSAGE</a></td>
+<td>Improves scalability for large-scale graph applications.</td>
+</tr>
+<tr>
+<td>Graph Neural Networks</td>
+<td>Graph Isomorphism Network</td>
+<td>2018</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1810.00826">GIN</a></td>
+<td>Improves performance for molecular design.</td>
+</tr>
+<tr>
+<td>Graph Neural Networks</td>
+<td>Neural Graph Fingerprints</td>
+<td>2016</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1603.08774">NGF</a></td>
+<td>Enhances implementation for chemical engineering.</td>
+</tr>
+<tr>
+<td>Graph Neural Networks</td>
+<td>Graph Neural Networks with Convolutional ARMA Filters</td>
+<td>2019</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1901.01343">ARMA-GNN</a></td>
+<td>Enhances flexibility for graph-based applications.</td>
+</tr>
+<tr>
+<td>Graph Neural Networks</td>
+<td>Diffusion Convolutional Recurrent Neural Network</td>
+<td>2018</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1707.01926">DCRNN</a></td>
+<td>Improves performance for transportation applications.</td>
+</tr>
+<tr>
+<td>Graph Neural Networks</td>
+<td>Gated Graph Sequence Neural Networks</td>
+<td>2016</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1511.05493">Gated GNN</a></td>
+<td>Improves efficiency for sequential graph tasks.</td>
+</tr>
+<tr>
+<td>Graph Neural Networks</td>
+<td>Message Passing Neural Networks for Quantum Chemistry</td>
+<td>2017</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1704.01212">MPNN</a></td>
+<td>Enhances scalability for chemical engineering.</td>
+</tr>
+<tr>
+<td>Graph Neural Networks</td>
+<td>Directed Graph Convolutional Networks</td>
+<td>2017</td>
+<td>TensorFlow</td>
+<td><a href="https://arxiv.org/abs/1704.08415">DGCN</a></td>
+<td>Improves implementation for directed graph tasks.</td>
+</tr>
+<tr>
+<td>Recent 2024 Papers</td>
+<td>Vision Transformers Need Registers</td>
+<td>2023</td>
+<td>Not specified</td>
+<td><a href="https://arxiv.org/abs/2309.16588">Vision Transformers</a></td>
+<td>Enhances performance for dense visual prediction tasks.</td>
+</tr>
+<tr>
+<td>Recent 2024 Papers</td>
+<td>HyperFast: A Hypernetwork for Fast Tabular Classification</td>
+<td>2024</td>
+<td>Not specified</td>
+<td>Search arXiv for “HyperFast”</td>
+<td>Makes model accessible for industrial data analysis.</td>
+</tr>
+<tr>
+<td>Recent 2024 Papers</td>
+<td>Grafting Vision Transformers</td>
+<td>2024</td>
+<td>Not specified</td>
+<td><a href="https://openaccess.thecvf.com/content/WACV2024/html/Park_Grafting_Vision_Transformers_WACV_2024_paper.html">Grafting ViTs</a></td>
+<td>Improves integration with vision transformers.</td>
+</tr>
+<tr>
+<td>Recent 2024 Papers</td>
+<td>Controllable Generation with Text-to-Image Diffusion Models: A Survey</td>
+<td>2024</td>
+<td>Not applicable</td>
+<td><a href="https://arxiv.org/abs/2403.04279">Text-to-Image Survey</a></td>
+<td>Provides foundation for generative AI research.</td>
+</tr>
+<tr>
+<td>Recent 2024 Papers</td>
+<td>DAPO: Data-Augmented Pre-training of Transformers for Math</td>
+<td>2024</td>
+<td>Not specified</td>
+<td>Search arXiv for “DAPO”</td>
+<td>Enables adoption for educational and research contexts.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="notes">Notes</h2>
+<ul>
+<li><strong>Existing Implementations</strong>: Some papers (e.g., BERT, ResNet) have PyTorch implementations. Your rewrite should offer unique optimizations, such as improved performance, scalability, or integration with specific industrial workflows.</li>
+<li><strong>Benchmarking</strong>: Performance improvements depend on your library’s requirements and hardware. Benchmark original and PyTorch implementations to quantify benefits.</li>
+<li><strong>Community Engagement</strong>: Share implementations on GitHub, Hugging Face, or similar platforms, and promote them via research communities, conferences, or social media (e.g., X posts) to maximize recognition.</li>
+<li><strong>Prioritization</strong>: Focus on high-impact papers (e.g., ResNet, BERT) or recent 2024 papers (e.g., HyperFast, DAPO) to align with community interest and emerging trends.</li>
+<li><strong>Documentation</strong>: Provide clear documentation, including setup instructions, usage examples, and performance comparisons, to enhance adoption and credit.</li>
+</ul>
+<p>This comprehensive list and table provide a robust resource for selecting papers to rewrite in PyTorch, maximizing the potential for performance improvements and recognition in your library across diverse deep learning domains and industrial applications.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
