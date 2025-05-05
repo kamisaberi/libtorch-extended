@@ -5,39 +5,11 @@
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/00_datasets/</loc>
-         <lastmod>2025-05-05</lastmod>
-    </url>
-    <url>
-         <loc>https://kamisaberi.github.io/xtorch/01_datasets_for_xtorch_library_not_in_pytorch/</loc>
-         <lastmod>2025-05-05</lastmod>
-    </url>
-    <url>
-         <loc>https://kamisaberi.github.io/xtorch/02_datasets_for_xtorch_library_not_in_pytorch/</loc>
-         <lastmod>2025-05-05</lastmod>
-    </url>
-    <url>
-         <loc>https://kamisaberi.github.io/xtorch/03_machine_learning_datasets_for_%20xtorch_library/</loc>
-         <lastmod>2025-05-05</lastmod>
-    </url>
-    <url>
-         <loc>https://kamisaberi.github.io/xtorch/04_comprehensive_machine_learning_datasets_for_xtorch_library/</loc>
-         <lastmod>2025-05-05</lastmod>
-    </url>
-    <url>
-         <loc>https://kamisaberi.github.io/xtorch/05_summary_of_machine_learning_datasets_for_xtorch_library/</loc>
-         <lastmod>2025-05-05</lastmod>
-    </url>
-    <url>
          <loc>https://kamisaberi.github.io/xtorch/api/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
          <loc>https://kamisaberi.github.io/xtorch/contributing/</loc>
-         <lastmod>2025-05-05</lastmod>
-    </url>
-    <url>
-         <loc>https://kamisaberi.github.io/xtorch/domain_specific_image_transforms_table/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
@@ -50,14 +22,6 @@
     </url>
     <url>
          <loc>https://kamisaberi.github.io/xtorch/license/</loc>
-         <lastmod>2025-05-05</lastmod>
-    </url>
-    <url>
-         <loc>https://kamisaberi.github.io/xtorch/list_of_albumentations_image_transforms/</loc>
-         <lastmod>2025-05-05</lastmod>
-    </url>
-    <url>
-         <loc>https://kamisaberi.github.io/xtorch/list_of_opencV_image_transforms/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
@@ -137,143 +101,135 @@
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/comprehensive_example_titles_for_xtorch_library/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/audio_and_speech/4_1_speech_recognition/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/comprehensive_example_titles_for_xtorch_library_with_medical_and_biological_applications/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/audio_and_speech/4_2_audio_classification/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/audio_and_speech/4_1_speech_recognition_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/computer_vision/2_1_image_classification/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/audio_and_speech/4_2_audio_classification_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/computer_vision/2_2_object_detection/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/computer_vision/2_1_image_classification_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/computer_vision/2_3_segmentation/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/computer_vision/2_2_object_detection_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/computer_vision/2_4_image_generation/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/computer_vision/2_3_segmentation_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/data_handling_and_preprocessing/10_1_datasets/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/computer_vision/2_4_image_generation_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/data_handling_and_preprocessing/10_2_data_loaders/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/data_handling_and_preprocessing/10_1_datasets_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/data_handling_and_preprocessing/10_3_transforms/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/data_handling_and_preprocessing/10_2_data_loaders_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/deployment_and_production/9_1_model_serialization/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/data_handling_and_preprocessing/10_3_transforms_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/deployment_and_production/9_2_inference/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/deployment_and_production/9_1_model_serialization_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/deployment_and_production/9_3_web_services/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/deployment_and_production/9_2_inference_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/distributed_and_parallel_training/13_1_data_parallelism/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/deployment_and_production/9_3_web_services_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/distributed_and_parallel_training/13_2_model_parallelism/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/distributed_and_parallel_training/13_1_data_parallelism_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/distributed_and_parallel_training/13_3_distributed_training/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/distributed_and_parallel_training/13_2_model_parallelism_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/generative_models/8_1_autoencoders/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/distributed_and_parallel_training/13_3_distributed_training_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/generative_models/8_2_gans/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/generative_models/8_1_autoencoders_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/generative_models/8_3_diffusion_models/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/generative_models/8_2_gans_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/getting_started/1_getting_started/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/generative_models/8_3_diffusion_models_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/graph_neural_networks/7_1_node_level_tasks/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/getting_started/1_getting_started_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/graph_neural_networks/7_2_graph_level_tasks/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/graph_neural_networks/7_1_node_level_tasks_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/natural_language_processing/3_1_text_classification/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/graph_neural_networks/7_2_graph_level_tasks_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/natural_language_processing/3_2_sequence_to_sequence/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/natural_language_processing/3_1_text_classification_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/natural_language_processing/3_3_language_modeling/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/natural_language_processing/3_2_sequence_to_sequence_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/optimization_and_training_techniques/11_1_optimizers/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/natural_language_processing/3_3_language_modeling_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/optimization_and_training_techniques/11_2_learning_rate_schedulers/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/optimization_and_training_techniques/11_1_optimizers_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/optimization_and_training_techniques/11_3_regularization/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/optimization_and_training_techniques/11_2_learning_rate_schedulers_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/performance_and_benchmarking/12_1_speed_optimization/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/optimization_and_training_techniques/11_3_regularization_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/performance_and_benchmarking/12_2_memory_management/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/performance_and_benchmarking/12_1_speed_optimization_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/reinforcement_learning/6_1_value_based_methods/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/performance_and_benchmarking/12_2_memory_management_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/reinforcement_learning/6_2_policy_based_methods/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/reinforcement_learning/6_1_value_based_methods_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/time_series_and_sequential_data/5_1_forecasting/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/reinforcement_learning/6_2_policy_based_methods_examples_for_xtorch/</loc>
-         <lastmod>2025-05-05</lastmod>
-    </url>
-    <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/time_series_and_sequential_data/5_1_forecasting_examples_for_xtorch/</loc>
-         <lastmod>2025-05-05</lastmod>
-    </url>
-    <url>
-         <loc>https://kamisaberi.github.io/xtorch/examples/time_series_and_sequential_data/5_2_anomaly_detection_examples_for_xtorch/</loc>
+         <loc>https://kamisaberi.github.io/xtorch/examples/time_series_and_sequential_data/5_2_anomaly_detection/</loc>
          <lastmod>2025-05-05</lastmod>
     </url>
     <url>
